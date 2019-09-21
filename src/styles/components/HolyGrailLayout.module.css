@@ -1,0 +1,81 @@
+.container {
+  display: inline-flex;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 14.35% 1fr 20.5%;
+  grid-template-rows: 14.15% 1fr 5.9%;
+  grid-template-areas:
+    'h h h'
+    'n m a'
+    'f f f';
+  color: #2d2500;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.header {
+  background: #aec600d1;
+  grid-area: h;
+}
+
+.nav {
+  background: #b5a900d0;
+  grid-area: n;
+}
+
+.main {
+  background: #f2cb05d0;
+  grid-area: m;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.aside {
+  background: #dba207d0;
+  grid-area: a;
+}
+
+.footer {
+  background: #d78800d0;
+  grid-area: f;
+}
+
+.holyGrailWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.holyGrail {
+  width: 30px;
+  animation: holyGrailSpin 2s ease-in-out infinite;
+}
+
+@keyframes holyGrailSpin {
+  0% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(8deg);
+  }
+
+  100% {
+    transform: rotate(-8deg);
+  }
+}

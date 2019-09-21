@@ -6,7 +6,6 @@ import {
   Slide,
   Notes,
   Image,
-  Fit,
   Layout,
   Fill,
   Appear,
@@ -15,11 +14,14 @@ import {
   Text,
   BlockQuote,
   Quote,
-  Cite
+  Cite,
+  S
 } from 'spectacle'
 import createTheme from 'spectacle/lib/themes/default'
 
 import 'normalize.css'
+
+import HolyGrailLayout from './components/HolyGrailLayout'
 
 const theme = createTheme(
   {
@@ -232,6 +234,64 @@ export default class Presentation extends React.Component {
             1 a cada 7 pessoas no mundo tem algum tipo de desabilidade em algum nível, seja ela
             visual, motora, auditiva ou cognitiva
           </Text>
+
+          <Notes>
+            Imagine a cada 7 pessoas, uma delas ser privada de ter uma experiência como todas as
+            outras, por algo que ela não escolheu ter
+            <br />
+            <br />
+            Sim, ainda é uma minoria, mas é um número significativo para prestar atenção
+          </Notes>
+        </Slide>
+
+        <Slide bgColor='secondary'>
+          <Heading size={1} fit caps>
+            HTML Semântico
+          </Heading>
+
+          <Appear>
+            <BlockQuote style={{ marginTop: 40 }}>
+              <Quote textSize={36}>
+                Em linguística, a semântica estuda o{' '}
+                <S type='bold' textColor='tertiary'>
+                  significado
+                </S>{' '}
+                e a{' '}
+                <S type='bold' textColor='tertiary'>
+                  interpretação do significado
+                </S>{' '}
+                de uma palavra, de um signo, de uma frase ou de uma expressão em um determinado{' '}
+                <S type='bold' textColor='tertiary'>
+                  contexto
+                </S>{' '}
+                .
+              </Quote>
+            </BlockQuote>
+          </Appear>
+
+          <Notes>
+            Primeiramente, qual o significado da palavra semântica?
+            <br />
+            <br />E como isso influencia no meu HTML?
+          </Notes>
+        </Slide>
+
+        <Slide contentStyles={{ maxHeight: '100%' }} bgColor='tertiary'>
+          <Layout style={{ maxHeight: 'inherit', position: 'relative' }}>
+            <Fill>
+              <HolyGrailLayout>
+                <Image style={{ margin: 0 }} height='90vh' src='./images/terra.jpg' />
+              </HolyGrailLayout>
+            </Fill>
+          </Layout>
+
+          <Notes>
+            <List>
+              <ListItem>Existe desde os primórdios da internet</ListItem>
+              <ListItem>Todo mundo conhece ou já ouviu falar</ListItem>
+              <ListItem>Já foi e ainda é muito usado na internet</ListItem>
+            </List>
+          </Notes>
         </Slide>
       </Deck>
     )
