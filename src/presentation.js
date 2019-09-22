@@ -15,13 +15,19 @@ import {
   BlockQuote,
   Quote,
   Cite,
-  S
+  S,
+  SlideSet,
+  CodePane,
+  Fit
 } from 'spectacle'
 import createTheme from 'spectacle/lib/themes/default'
 
 import 'normalize.css'
 
 import HolyGrailLayout from './components/HolyGrailLayout'
+import ComponentToStringService from './services/ComponentToString'
+import NonSemanticHtmlExamples from './components/NonSemanticHtmlExamples'
+import SemanticHtmlExamples from './components/SemanticHtmlExamples'
 
 const theme = createTheme(
   {
@@ -276,7 +282,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
 
-        <Slide contentStyles={{ maxHeight: '100%' }} bgColor='tertiary'>
+        <Slide contentStyles={{ maxHeight: '100%' }} bgColor='secondary'>
           <Layout style={{ maxHeight: 'inherit', position: 'relative' }}>
             <Fill>
               <HolyGrailLayout>
@@ -292,6 +298,61 @@ export default class Presentation extends React.Component {
               <ListItem>Já foi e ainda é muito usado na internet</ListItem>
             </List>
           </Notes>
+        </Slide>
+
+        <Slide bgColor='secondary'>
+          <Heading size={1} fit caps textColor='tertiary'>
+            De que forma um
+            <br />
+            HTML semântico ajuda
+            <br />
+            na acessibilidade?
+          </Heading>
+        </Slide>
+
+        <Slide bgColor='secondary' contentStyles={{ maxWidth: 1150 }}>
+          <Heading size={1} fit caps textColor='tertiary'>
+            HTML Semântico = Contexto para screen readers
+          </Heading>
+
+          <Layout style={{ marginTop: 30 }}>
+            <Fill style={{ marginRight: 20 }}>
+              <CodePane
+                lang='html'
+                source={ComponentToStringService.convert(<NonSemanticHtmlExamples />)}
+              />
+            </Fill>
+
+            <Fill>
+              <CodePane
+                lang='html'
+                source={ComponentToStringService.convert(<SemanticHtmlExamples />)}
+              />
+            </Fill>
+          </Layout>
+
+          <Notes>
+            Ajuda na navegação via screen reader
+            <br />
+            <br />
+            Alguns leitores de tela como NVDA possuem uma funcionalidade de navegar entre títulos ou
+            links da página
+          </Notes>
+        </Slide>
+
+        <Slide bgColor='secondary' contentStyles={{ height: '100%' }}>
+          <Layout style={{ height: '100%', flexDirection: 'column' }}>
+            <Fit>
+              <Heading size={1} fit caps textColor='tertiary'>
+                Navegação com teclado funcionando por padrão
+              </Heading>
+            </Fit>
+            <Fill>
+              <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+                <source src='./videos/form-keyboard-navigation.mp4' type='video/mp4' />
+              </video>
+            </Fill>
+          </Layout>
         </Slide>
       </Deck>
     )

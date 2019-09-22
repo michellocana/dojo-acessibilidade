@@ -12,7 +12,7 @@
   width: 100%;
   height: 100%;
   grid-template-columns: 14.35% 1fr 20.5%;
-  grid-template-rows: 14.15% 1fr 5.9%;
+  grid-template-rows: 14.05% 1fr 6%;
   grid-template-areas:
     'h h h'
     'n m a'
@@ -27,13 +27,18 @@
   flex-flow: column nowrap;
 }
 
+.border {
+  box-shadow: 0 0 0 2px #2d2500;
+  margin: 2px 2px 0 0;
+}
+
 .header {
-  background: #aec600d1;
+  background: #f2cb05d0;
   grid-area: h;
 }
 
 .nav {
-  background: #b5a900d0;
+  background: #f2cb05d0;
   grid-area: n;
 }
 
@@ -46,12 +51,12 @@
 }
 
 .aside {
-  background: #dba207d0;
+  background: #f2cb05d0;
   grid-area: a;
 }
 
 .footer {
-  background: #d78800d0;
+  background: #f2cb05d0;
   grid-area: f;
 }
 
