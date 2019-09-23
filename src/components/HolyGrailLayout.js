@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import { Appear, Text, Image, Anim } from 'spectacle'
 
-import styles from '../styles/components/HolyGrailLayout.module.css'
+import styles from './HolyGrailLayout.module.css'
 
 const HolyGrailLayout = props => {
   const [showSemanticCode, setShowSemanticCode] = useState(false)
