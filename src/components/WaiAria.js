@@ -39,8 +39,8 @@ const WaiAria = ({
             id='firstToggle'
             {...firstToggleClassName}
             {...firstToggleLabel}
-            {...firstToggleControls}
             {...firstTogglePressed}
+            {...firstToggleControls}
             onClick={() => onButtonClick(true)}
           >
             <img src='./images/gulp.svg' {...firstImageRole} />
@@ -51,8 +51,8 @@ const WaiAria = ({
             id='secondToggle'
             {...secondToggleClassName}
             {...secondToggleLabel}
-            {...secondToggleControls}
             {...secondTogglePressed}
+            {...secondToggleControls}
             onClick={() => onButtonClick(false)}
           >
             <img src='./images/webpack.svg' {...secondImageRole} />

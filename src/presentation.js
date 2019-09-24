@@ -502,6 +502,132 @@ const Presentation = () => {
           navegam pelo teclado
         </Notes>
       </Slide>
+
+      {/* TODO melhorar explicação desse slide */}
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+          Evite usar "order" ou "flex-direction: row-reverse|column-reverse"
+        </Heading>
+
+        <Text textColor='primary' textSize={24}>
+          Propriedades de CSS que alteram a ordem em que os elementos são exibidos podem até ser
+          úteis, mas fazem com que o conteúdo da página não siga uma ordem lógica quando consumido
+          pelo teclado ou por tecnologia assistiva.
+        </Text>
+
+        <Notes>
+          Use com cautela
+          <br />
+          <br />
+          Tente fazer com que o HTML sempre siga uma ordem lógica
+        </Notes>
+      </Slide>
+
+      {/* TODO exemplificar o mau uso de content */}
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+          Use a propriedade "content" somente para fins visuais
+        </Heading>
+
+        <Text textColor='primary' textSize={24}>
+          Essa propriedade é usada em{' '}
+          <S type='bold' textColor='tertiary'>
+            pseudo
+          </S>
+          -elementos (::before e ::after), e possibilita que texto seja adicionado via CSS
+        </Text>
+
+        <Text textColor='primary' textSize={24} style={{ paddingTop: 20 }}>
+          Mas todo texto que é setado via content não é selecionável, e também "não existe" para
+          tecnologias assistivas
+        </Text>
+
+        <Notes>Ênfase no PSEUDO, por que o elemento literalmente não existe</Notes>
+      </Slide>
+
+      {/*
+        TODO vídeo mostrando com/sem transitions, quando muda a config do windows
+        Talvez dê pra mostrar um exemplo mais simples antes de mostrar o seletor *,
+        pra explicar em camadas esse conceito
+      */}
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+          prefers-reduced-motion
+        </Heading>
+
+        <CodePane
+          lang='html'
+          source={`<style>
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>`}
+        />
+
+        <Notes>
+          Remove todas animações/transições, quando o usuário seta essa config no Windows
+          <br />
+          <br />
+          Um bom exemplo de como !important pode sim ser útil em alguns casos
+        </Notes>
+      </Slide>
+
+      {/* TODO exemplo simples de uso de alt */}
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Alt para imagens
+        </Heading>
+      </Slide>
+
+      {/*
+        - Primeiro, explicar rapidamente o que é o alt e pra que ele serve
+        - Dicas do que não fazer ao definir o alt de uma imagem
+        - Fazer uma dinâmica simples, pra decidir qual a melhor descrição pra imagem
+          de um cachorro usando sapato
+        - Mostrar que o alt da imagem é contextual, ou seja, se o site for uma loja
+          de sapatos pra cachorro, o alt da imagem deve ser a descrição do sapato só,
+          não do cachorro
+      */}
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Em busca do alt perfeito
+        </Heading>
+
+        <List textColor='primary'>
+          <ListItem>Descreva somente o indispensável</ListItem>
+          <ListItem>
+            Adicione algo que seja relevante (nada de alt="DCIM_1234.jpg" ou alt="Foto tirada pelo
+            fotógrafo Joaquim Teixeira Junior"
+          </ListItem>
+          <ListItem>
+            Não precisa adicionar "Foto de..." ou "Imagem de..." no começo do texto de alt
+          </ListItem>
+          <ListItem>
+            Entenda o contexto da imagem na página, e só depois disso descreva ela
+          </ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Forneça alternativa à conteúdos de texto também
+        </Heading>
+
+        <Text textColor='primary' style={{ paddingTop: 20 }}>
+          Adicionar imagens que complementam a explicação de um texto (como um artigo ou tutorial)
+          auxilia pessoas com{' '}
+          <S type='bold' textColor='tertiary'>
+            déficit de atenção
+          </S>{' '}
+          ou{' '}
+          <S type='bold' textColor='tertiary'>
+            dislexia
+          </S>
+        </Text>
+      </Slide>
     </Deck>
   )
 }
