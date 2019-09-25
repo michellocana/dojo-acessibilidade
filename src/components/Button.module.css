@@ -1,0 +1,32 @@
+.button {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+  outline-color: white !important;
+}
+
+.button:focus {
+  outline: 3px solid;
+}
+
+.buttonRed {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.buttonYellow {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.buttonBlue {
+  color: #fff;
+  background-color: #0069d9;
+}
+
+.button.noOutline {
+  outline: none;
+}

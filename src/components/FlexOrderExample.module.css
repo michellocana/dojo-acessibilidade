@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerReverse {
+  composes: container;
+  flex-direction: row-reverse;
+}
+
+.wrapper {
+  margin-top: 20px;
+}
