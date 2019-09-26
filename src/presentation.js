@@ -31,6 +31,7 @@ import OutlineExample from './components/OutlineExample'
 import ComponentToStringService from './services/ComponentToString'
 import FlexOrderExample from './components/FlexOrderExample'
 import ContentText from './components/ContentText'
+import ContextualImageAlt from './components/ContextualImageAlt'
 
 const theme = createTheme(
   {
@@ -341,7 +342,7 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ height: '100%' }}>
+      <Slide bgColor='secondary' contentStyles={{ height: '100%', maxWidth: 980 }}>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
             <Heading size={1} fit caps textColor='tertiary'>
@@ -505,17 +506,15 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      {/* TODO melhorar explicação desse slide */}
       <Slide bgColor='secondary'>
         <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
           Não modifique a ordem lógica do HTML via CSS
-          {/* Evite usar "order" ou "flex-direction: row-reverse|column-reverse" */}
         </Heading>
 
         <Text textColor='primary' textSize={24}>
-          Propriedades de CSS que alteram a ordem em que os elementos são exibidos podem até ser
-          úteis, mas fazem com que o conteúdo da página não siga uma ordem lógica quando consumido
-          pelo teclado ou por tecnologia assistiva.
+          Propriedades de CSS que alteram a ordem em que os elementos são exibidos (como float,
+          order ou flex-direction) podem até ser úteis, mas fazem com que o conteúdo da página não
+          siga uma ordem lógica quando consumido pelo teclado ou por tecnologia assistiva.
         </Text>
 
         <FlexOrderExample />
@@ -550,11 +549,6 @@ const Presentation = () => {
         <Notes>Ênfase no PSEUDO, por que o elemento literalmente não existe</Notes>
       </Slide>
 
-      {/*
-        TODO vídeo mostrando com/sem transitions, quando muda a config do windows
-        Talvez dê pra mostrar um exemplo mais simples antes de mostrar o seletor *,
-        pra explicar em camadas esse conceito
-      */}
       <Slide bgColor='secondary'>
         <Heading size={1} fit caps textColor='tertiary'>
           Media query assistiva: prefers-reduced-motion
@@ -593,6 +587,22 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   // Lógica para remover animação aqui
 }`}
             />
+          </Fill>
+        </Layout>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Layout style={{ height: '100%', flexDirection: 'column' }}>
+          <Fit>
+            <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 5 }}>
+              Media query assistiva: prefers-reduced-motion
+            </Heading>
+          </Fit>
+
+          <Fill>
+            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+              <source src='./videos/prefers-reduced-motion.mp4' type='video/mp4' />
+            </video>
           </Fill>
         </Layout>
       </Slide>
@@ -682,18 +692,36 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Heading>
 
         <List textColor='primary'>
-          <ListItem>Descreva somente o indispensável</ListItem>
-          <ListItem>
-            Adicione algo que seja relevante (nada de alt="DCIM_1234.jpg" ou alt="Foto tirada pelo
-            fotógrafo Joaquim Teixeira Junior"
-          </ListItem>
-          <ListItem>
-            Não precisa adicionar "Foto de..." ou "Imagem de..." no começo do texto de alt
-          </ListItem>
-          <ListItem>
-            Entenda o contexto da imagem na página, e só depois disso descreva ela
-          </ListItem>
+          <Appear>
+            <ListItem>Descreva somente o indispensável</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Adicione algo que seja relevante (nada de alt="DCIM_1234.jpg" ou alt="Foto tirada pelo
+              fotógrafo Joaquim Teixeira Junior"
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Não precisa adicionar "Foto de..." ou "Imagem de..." no começo do texto de alt
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Entenda o contexto da imagem na página, e só depois disso descreva ela
+            </ListItem>
+          </Appear>
         </List>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Contexto da imagem? What?
+        </Heading>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <ContextualImageAlt />
       </Slide>
 
       <Slide bgColor='secondary'>

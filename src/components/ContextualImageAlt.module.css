@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text {
+  width: 55%;
+  padding-left: 30px;
+}
+
+.title {
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+img.image {
+  margin: 0;
+}
+
+.figure {
+  margin: 0;
+  position: relative;
+}
+
+.figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.7em 0;
+}
