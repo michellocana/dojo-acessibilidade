@@ -126,9 +126,11 @@ const Presentation = () => {
           <Appear>
             <Image margin={5} width='100%' src='./images/braille-reader.jpg' />
           </Appear>
+
           <Appear>
             <Image margin={5} width='100%' src='./images/eye-tracker.png' />
           </Appear>
+
           <Appear>
             <Image margin={5} width='100%' src='./images/switch-access.jpg' />
           </Appear>
