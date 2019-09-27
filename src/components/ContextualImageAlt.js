@@ -12,11 +12,12 @@ const STAGES = {
 
 const MAIN_FIGURE_STYLES = {
   PRESENTING: {
-    width: '45%',
-    top: '50%',
+    width: '50%',
+    height: 'auto',
+    top: '10%',
     left: '50%',
     x: '-50%',
-    y: '-50%'
+    y: 0
   },
 
   BLOG: {
@@ -30,7 +31,6 @@ const MAIN_FIGURE_STYLES = {
 
   SHOP: {
     width: 'calc(33.33% - 20px)',
-    height: 'auto',
     top: 0,
     left: 'auto',
     x: 0,
@@ -128,7 +128,7 @@ const ContextualImageAlt = props => {
           initial={{ position: 'fixed', top: '100%', height: 'auto' }}
           animate={{ position: 'static', top: 'auto', height: 'auto' }}
           exit={{ position: 'fixed', top: '100%', height: 'auto' }}
-          transition={{ ease: 'linear', yoyo: 0, staggerChildren: 1 }}
+          transition={{ ease: 'linear', yoyo: 0 }}
           style={{ width: 'calc(33.33% - 20px)', height: 'auto' }}
         >
           <motion.div
