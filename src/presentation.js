@@ -722,7 +722,15 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Heading>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide
+        bgColor='secondary'
+        contentStyles={{
+          overflow: 'auto',
+          maxHeight: '100%',
+          height: 'calc(100% - 10px)',
+          alignSelf: 'flex-start'
+        }}
+      >
         <ContextualImageAlt />
       </Slide>
 
