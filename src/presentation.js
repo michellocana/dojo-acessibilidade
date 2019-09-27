@@ -17,7 +17,8 @@ import {
   Cite,
   S,
   CodePane,
-  Fit
+  Fit,
+  Link
 } from 'spectacle'
 import createTheme from 'spectacle/lib/themes/default'
 
@@ -32,6 +33,7 @@ import ComponentToStringService from './services/ComponentToString'
 import FlexOrderExample from './components/FlexOrderExample'
 import ContentText from './components/ContentText'
 import ContextualImageAlt from './components/ContextualImageAlt'
+import MetaViewport from './components/MetaViewport'
 
 const theme = createTheme(
   {
@@ -750,6 +752,87 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             dislexia
           </S>
         </Text>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Ferramentas (para devs)
+        </Heading>
+
+        <List textColor='primary'>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR'
+            >
+              Lighthouse
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://www.deque.com/axe/axe-for-web/'
+            >
+              Axe
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://www.npmjs.com/package/eslint-plugin-jsx-a11y'
+            >
+              eslint-plugin-jsx-a11y
+            </Link>
+          </ListItem>
+          <ListItem>
+            Devtools do{' '}
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://developers.google.com/web/tools/chrome-devtools/accessibility/reference'
+            >
+              Chrome
+            </Link>
+            /
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector'
+            >
+              Firefox
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link target='_blank' textColor='tertiary' href='https://ui.reach.tech/'>
+              Reach UI
+            </Link>
+          </ListItem>
+        </List>
+
+        <Notes>Reach UI - Componentes pensados exclusivamente em A11Y/UX (link)</Notes>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Boas Práticas - Não desabilite o zoom da página
+        </Heading>
+
+        <Text fit textColor='primary' textSize={21}>
+          Não tire o poder do usuário decidir o tamanho das coisas na tela
+        </Text>
+
+        <MetaViewport />
+
+        <Notes>
+          Desde que o RWD (design responsivo) começou a ser adotado, ficou comum o uso dessa meta
+          tag
+          <br />
+          <br />
+          Mas ela desabilita o zoom, então é melhor usar essa segunda versão dela
+        </Notes>
       </Slide>
     </Deck>
   )
