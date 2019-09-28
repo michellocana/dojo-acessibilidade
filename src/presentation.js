@@ -869,6 +869,239 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           Mas ela desabilita o zoom, então é melhor usar essa segunda versão dela
         </Notes>
       </Slide>
+
+      <Slide bgColor='secondary'>
+        <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
+          <Fit>
+            <Heading size={1} fit caps textColor='tertiary'>
+              Boas Práticas - Tamanho importa
+            </Heading>
+
+            <Text textColor='primary' textSize={24}>
+              Dimensione corretamente as áreas de toque do site
+            </Text>
+          </Fit>
+
+          <Fill>
+            <Layout>
+              <Fill>
+                <img
+                  src='./images/tap-zone-wrong.svg'
+                  alt='Área de toque errada.'
+                  style={{ margin: 20 }}
+                />
+              </Fill>
+
+              <Fill>
+                <img
+                  src='./images/tap-zone-correct.svg'
+                  alt='Área de toque correta.'
+                  style={{ margin: 20 }}
+                />
+              </Fill>
+            </Layout>
+          </Fill>
+        </Layout>
+
+        <Notes>O Chrome/Safari dão zoom quando uma área de toque muito pequena é tocada</Notes>
+      </Slide>
+
+      <Slide bgColor='secondary' contentStyles={{ height: '100%', maxWidth: 980 }}>
+        <Layout style={{ height: '100%', flexDirection: 'column' }}>
+          <Fit>
+            <Heading size={1} fit caps textColor='tertiary'>
+              Boas Práticas - Skip to content link
+            </Heading>
+          </Fit>
+
+          <Fill>
+            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+              <source src='./videos/skip-to-content-link.webm' type='video/webm' />
+            </video>
+          </Fill>
+        </Layout>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Boas Práticas - Smooth scroll
+        </Heading>
+
+        <Text textColor='primary' textAlign='left' style={{ paddingTop: 30 }}>
+          Faça uma animação rápida, ou não use animação.
+          <br />
+          <br />
+          Um scroll animado por muito tempo pode ser desagradável para pessoas com epilepsia.
+          <br />
+          <br />
+          Segundo a WebAIM, o tempo máximo de smooth scroll deve ser de 250ms (1/4 de segundo).
+        </Text>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Layout style={{ height: '100%', flexDirection: 'column' }}>
+          <Fit>
+            <Heading size={1} fit caps textColor='tertiary'>
+              Boas Práticas - Dê feedback instantâneo ao usuário
+            </Heading>
+          </Fit>
+
+          <Fill style={{ paddingTop: 50 }}>
+            <img src='./images/immediate-feedback.gif' alt='Comparação de feedback instantâneo' />
+          </Fill>
+
+          <Notes>
+            Essa prática ajuda principalmente usuários com algum tipo de transtorno de ansiedade,
+            mas também é muito útil para o público em geral
+          </Notes>
+        </Layout>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Boas Práticas - Não dê um tempo determinado
+          <br />
+          para o usuário finalizar uma tarefa
+        </Heading>
+
+        <Notes>
+          Por mais que a gente tente, a gente não pode prever todos os tipos de dificuldades que o
+          usuário pode ter na nossa aplicação.
+        </Notes>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Boas Práticas - Não leve em conta que você sabe
+          <br /> por onde e como o usuário acessa seu site
+        </Heading>
+
+        <Notes>Sempre vai ter um usuário que vai te provar o contrário</Notes>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading fit size={1} textSize={48} caps textColor='tertiary'>
+          Modelo de celular ou nome de pokémon?
+        </Heading>
+
+        <List
+          textColor='primary'
+          style={{ display: 'flex', flexFlow: 'column wrap', maxHeight: 460 }}
+        >
+          <ListItem>Bluboo</ListItem>
+          <ListItem>Aquaris</ListItem>
+          <ListItem>Caterpillar</ListItem>
+          <ListItem>Condor</ListItem>
+          <ListItem>Digiland</ListItem>
+          <ListItem>Doogee</ListItem>
+          <ListItem>Echo Stellar</ListItem>
+          <ListItem>Elephone</ListItem>
+          <ListItem>Foxconn</ListItem>
+          <ListItem>Gdippo</ListItem>
+          <ListItem>Meizu</ListItem>
+          <ListItem>Mobell</ListItem>
+          <ListItem>Neffos</ListItem>
+          <ListItem>Obi</ListItem>
+          <ListItem>Oukitel</ListItem>
+          <ListItem>Poptel</ListItem>
+          <ListItem>Sensonic</ListItem>
+        </List>
+
+        <Notes>Dados do Analytics de Arezzo durante o período de 1 mês</Notes>
+      </Slide>
+
+      <Slide bgColor='secondary' contentStyles={{ maxWidth: 1150 }}>
+        <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
+          <Fit>
+            <Heading size={1} fit caps textColor='tertiary'>
+              Boas Práticas - Teste em ferramentas reais, você mesmo
+            </Heading>
+
+            <Text textColor='primary' textSize={24} style={{ paddingTop: 10, paddingBottom: 20 }}>
+              Lighthouse está aí pra ajudar, mas não confie cegamente no score dele quando se trata
+              de acessibilidade.{' '}
+              <Link
+                target='_blank'
+                textColor='tertiary'
+                href='https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/'
+              >
+                Muita coisa pode passar despercebida
+              </Link>
+              .
+            </Text>
+          </Fit>
+
+          <Fill>
+            <Layout style={{ margin: '0 -10px', alignItems: 'center' }}>
+              <Fill style={{ padding: 10 }}>
+                <img
+                  src='./images/lighthouse-1.png'
+                  alt='Interface do Lighthouse aberta.'
+                  style={{ maxWidth: '100%' }}
+                />
+              </Fill>
+
+              <Fill style={{ padding: 10 }}>
+                <img
+                  src='./images/lighthouse-2.png'
+                  alt='Resultados de teste do Lighthouse.'
+                  style={{ maxWidth: '100%' }}
+                />
+              </Fill>
+            </Layout>
+          </Fill>
+        </Layout>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Boas Práticas - Teste em ferramentas reais
+        </Heading>
+
+        <Text textColor='primary' textAlign='left' style={{ paddingTop: 30 }}>
+          Screen readers mais usados:
+        </Text>
+
+        <List textColor='primary'>
+          <ListItem>JAWS e NVDA (Windows)</ListItem>
+          <ListItem>TalkBack (Android)</ListItem>
+          <ListItem>VoiceOver (iOS)</ListItem>
+        </List>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Boas Práticas - Teste TUDO
+        </Heading>
+
+        <Text textColor='primary' textAlign='left' style={{ paddingTop: 30 }}>
+          É comum dar atenção somente à partes mais importantes do site quando se faz teste de
+          acessibilidade.
+          <br />
+          <br />
+          Mas lembre-se que o usuário pode{' '}
+          <S textColor='tertiary' type='bold'>
+            navegar pelo site inteiro
+          </S>
+          ... Garanta que todos os usuários consigam fazer isso.
+        </Text>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Não existe "site meio acessível"
+        </Heading>
+      </Slide>
+
+      <Slide bgColor='secondary' contentStyles={{ padding: 0 }}>
+        <img
+          src='./images/half-accessible.jpg'
+          alt='Rampa de deficiente não acessível'
+          style={{
+            maxHeight: 'inherit'
+          }}
+        />
+      </Slide>
     </Deck>
   )
 }
