@@ -681,15 +681,6 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Heading>
       </Slide>
 
-      {/*
-        - Primeiro, explicar rapidamente o que é o alt e pra que ele serve
-        - Dicas do que não fazer ao definir o alt de uma imagem
-        - Fazer uma dinâmica simples, pra decidir qual a melhor descrição pra imagem
-          de um cachorro usando sapato
-        - Mostrar que o alt da imagem é contextual, ou seja, se o site for uma loja
-          de sapatos pra cachorro, o alt da imagem deve ser a descrição do sapato só,
-          não do cachorro
-      */}
       <Slide bgColor='secondary'>
         <Heading size={1} fit caps textColor='tertiary'>
           Em busca do alt perfeito
@@ -715,6 +706,9 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
               Entenda o contexto da imagem na página, e só depois disso descreva ela
             </ListItem>
           </Appear>
+          <Appear>
+            <ListItem>Adicione um ponto final no fim de cada alt</ListItem>
+          </Appear>
         </List>
       </Slide>
 
@@ -729,8 +723,11 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         contentStyles={{
           overflow: 'auto',
           maxHeight: '100%',
+          maxWidth: 'none',
           height: 'calc(100% - 10px)',
-          alignSelf: 'flex-start'
+          alignSelf: 'flex-start',
+          padding: 0,
+          display: 'flex'
         }}
       >
         <ContextualImageAlt />
