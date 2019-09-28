@@ -34,6 +34,9 @@ import FlexOrderExample from './components/FlexOrderExample'
 import ContentText from './components/ContentText'
 import ContextualImageAlt from './components/ContextualImageAlt'
 import MetaViewport from './components/MetaViewport'
+import AltExample from './components/AltExample'
+import ExcessiveAltExample from './components/ExcessiveAltExample'
+import IrrelevantAltExample from './components/IrrelevantAltExample'
 
 const theme = createTheme(
   {
@@ -674,11 +677,47 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      {/* TODO exemplo simples de uso de alt */}
       <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
-          Alt para imagens
-        </Heading>
+        <Layout style={{ flexDirection: 'column' }}>
+          <Fit>
+            <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 5 }}>
+              Como escrever um alt acessível?
+            </Heading>
+          </Fit>
+
+          <Fill>
+            <Layout>
+              <Fill>
+                <CodePane
+                  lang='html'
+                  source={ComponentToStringService.convert(<AltExample />)}
+                  style={{
+                    display: 'flex',
+                    height: '100%'
+                  }}
+                />
+              </Fill>
+
+              <Fit style={{ marginLeft: 20 }}>
+                <AltExample />
+              </Fit>
+            </Layout>
+          </Fill>
+        </Layout>
+
+        <Notes>O alt serve também pra quando a imagem não carrega por algum motivo</Notes>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <ExcessiveAltExample />
+
+        <Notes>
+          Mulher segurando garrafa de Coca-Cola, ao lado de produtos diversos da Coca-Cola.
+        </Notes>
+      </Slide>
+
+      <Slide bgColor='secondary' contentStyles={{ height: '100%' }}>
+        <IrrelevantAltExample />
       </Slide>
 
       <Slide bgColor='secondary'>
@@ -686,30 +725,29 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           Em busca do alt perfeito
         </Heading>
 
-        <List textColor='primary'>
-          <Appear>
-            <ListItem>Descreva somente o indispensável</ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              Adicione algo que seja relevante (nada de alt="DCIM_1234.jpg" ou alt="Foto tirada pelo
-              fotógrafo Joaquim Teixeira Junior"
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              Não precisa adicionar "Foto de..." ou "Imagem de..." no começo do texto de alt
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              Entenda o contexto da imagem na página, e só depois disso descreva ela
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>Adicione um ponto final no fim de cada alt</ListItem>
-          </Appear>
-        </List>
+        <Text textColor='primary' textSize={36} style={{ marginTop: 20 }}>
+          Adicione um ponto final na descrição da imagem
+        </Text>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Em busca do alt perfeito
+        </Heading>
+
+        <Text textColor='primary' textSize={36} style={{ marginTop: 20 }}>
+          Não precisa adicionar "Foto de..." ou "Imagem de..." no começo do texto de alt
+        </Text>
+      </Slide>
+
+      <Slide bgColor='secondary'>
+        <Heading size={1} fit caps textColor='tertiary'>
+          Em busca do alt perfeito
+        </Heading>
+
+        <Text textColor='primary' textSize={36} style={{ marginTop: 20 }}>
+          Entenda o contexto da imagem na página, e só depois disso descreva ela
+        </Text>
       </Slide>
 
       <Slide bgColor='secondary'>
@@ -735,7 +773,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
       <Slide bgColor='secondary'>
         <Heading size={1} fit caps textColor='tertiary'>
-          Forneça alternativa à conteúdos de texto também
+          Forneça alternativa à conteúdos de texto
         </Heading>
 
         <Text textColor='primary' style={{ paddingTop: 20 }}>

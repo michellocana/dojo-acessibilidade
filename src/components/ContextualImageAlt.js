@@ -12,7 +12,7 @@ const STAGES = {
 
 const MAIN_FIGURE_STYLES = {
   PRESENTING: {
-    width: '52%',
+    width: '48%',
     height: 'auto'
   },
 
@@ -62,7 +62,7 @@ const FIGCAPTION_STYLES = {
   SHOP: {
     opacity: 1,
     fontSize: 21,
-    backgroundColor: 'rgba(211, 54, 72, 1)'
+    backgroundColor: '#dc3545'
   }
 }
 
@@ -196,7 +196,7 @@ const ContextualImageAlt = props => {
             layoutTransition
             animate={MAIN_FIGURE_STYLES[stage]}
             initial={{
-              width: '52%',
+              width: '48%',
               height: 'auto'
             }}
           >
@@ -210,7 +210,7 @@ const ContextualImageAlt = props => {
                   backgroundColor:
                     imageAlt === IMAGE_ALTS.DEFAULT
                       ? FIGCAPTION_STYLES[stage].backgroundColor
-                      : 'rgb(0, 111, 15)'
+                      : '#28a745'
                 }}
               >
                 {imageAlt}
