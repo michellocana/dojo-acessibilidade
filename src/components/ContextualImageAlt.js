@@ -225,12 +225,12 @@ const ContextualImageAlt = props => {
               Frederico, <br />o cachorro swag 🐕😎💯
             </Heading>
 
-            <Text textColor='primary' textSize={24} textAlign='left' lineHeight={1.3}>
+            <Text textColor='secondary' textSize={24} textAlign='left' lineHeight={1.3}>
               Esse é Frederico, usando seu casaco vermelho da Pupreme edição limitada 2019.
             </Text>
 
             <Text
-              textColor='primary'
+              textColor='secondary'
               textSize={24}
               textAlign='left'
               lineHeight={1.3}
@@ -241,7 +241,7 @@ const ContextualImageAlt = props => {
             </Text>
 
             <Text
-              textColor='primary'
+              textColor='secondary'
               textSize={24}
               textAlign='left'
               lineHeight={1.3}

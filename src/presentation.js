@@ -24,12 +24,13 @@ import createTheme from 'spectacle/lib/themes/default'
 
 import 'normalize.css'
 
+import ComponentToStringService from './services/ComponentToString'
+
 import HolyGrailLayout from './components/HolyGrailLayout'
 import NonSemanticHtmlExamples from './components/NonSemanticHtmlExamples'
 import SemanticHtmlExamples from './components/SemanticHtmlExamples'
 import WaiAriaWrapper from './components/WaiAriaWrapper'
 import OutlineExample from './components/OutlineExample'
-import ComponentToStringService from './services/ComponentToString'
 import FlexOrderExample from './components/FlexOrderExample'
 import ContentText from './components/ContentText'
 import ContextualImageAlt from './components/ContextualImageAlt'
@@ -37,13 +38,14 @@ import MetaViewport from './components/MetaViewport'
 import AltExample from './components/AltExample'
 import ExcessiveAltExample from './components/ExcessiveAltExample'
 import IrrelevantAltExample from './components/IrrelevantAltExample'
+import ImmediateFeedback from './components/ImmediateFeedback'
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quaternary: '#CECECE'
+    primary: '#1F2022', // 'white',
+    secondary: 'white', // '#1F2022',
+    tertiary: '#03A9FC', // '#03A9FC',
+    quaternary: '#CECECE' // '#CECECE'
   },
   {
     primary: 'Montserrat',
@@ -125,7 +127,9 @@ const Presentation = () => {
           Perceivable (perceptível)
         </Heading>
 
-        <Text fit>Cada usuário tem capacidades e limitações diferentes</Text>
+        <Text fit textColor='secondary'>
+          Cada usuário tem capacidades e limitações diferentes
+        </Text>
 
         <Layout style={{ marginTop: 20 }}>
           <Appear>
@@ -154,7 +158,9 @@ const Presentation = () => {
           Operable (operável)
         </Heading>
 
-        <Text fit>Permitir que o usuário consiga operar o site das mais diversas formas</Text>
+        <Text fit textColor='secondary'>
+          Permitir que o usuário consiga operar o site das mais diversas formas
+        </Text>
 
         <Notes>
           Como usando SOMENTE o teclado ou mouse
@@ -169,7 +175,9 @@ const Presentation = () => {
           Understandable (coerente)
         </Heading>
 
-        <Text fit>Tanto a interface quanto o conteúdo dela devem ser de fácil entendimento</Text>
+        <Text fit textColor='secondary'>
+          Tanto a interface quanto o conteúdo dela devem ser de fácil entendimento
+        </Text>
       </Slide>
 
       <Slide>
@@ -177,7 +185,7 @@ const Presentation = () => {
           Robust (robusto)
         </Heading>
 
-        <Text fit>
+        <Text fit textColor='secondary'>
           Permitir que o conteúdo seja acessado numa grande
           <br /> variedade de browsers e dispositivos
         </Text>
@@ -214,14 +222,14 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Heading size={1} fit caps>
           Mito do usuário de minoria
         </Heading>
 
         <Appear>
           <BlockQuote style={{ marginTop: 80 }}>
-            <Quote textSize={50}>
+            <Quote textSize={50} textColor='secondary' style={{ borderColor: 'white' }}>
               Acessibilidade é mais uma coisa pra mim me preocupar como dev
             </Quote>
             <Cite margin={20}>Alguém que precisa assistir esse dojo</Cite>
@@ -230,7 +238,9 @@ const Presentation = () => {
 
         <Appear>
           <BlockQuote style={{ marginTop: 20 }}>
-            <Quote textSize={50}>Quase ninguém é beneficiado com isso...</Quote>
+            <Quote textSize={50} textColor='secondary' style={{ borderColor: 'white' }}>
+              Quase ninguém é beneficiado com isso...
+            </Quote>
             <Cite margin={20}>O mesmo cara da frase de cima</Cite>
           </BlockQuote>
         </Appear>
@@ -240,12 +250,12 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Heading size={1} fit caps>
           Mito do usuário de minoria
         </Heading>
 
-        <Text textColor='primary'>
+        <Text textColor='secondary'>
           1 a cada 7 pessoas no mundo tem algum tipo de desabilidade em algum nível, seja ela
           visual, motora, auditiva ou cognitiva
         </Text>
@@ -259,14 +269,14 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Heading size={1} fit caps>
           HTML Semântico
         </Heading>
 
         <Appear>
           <BlockQuote style={{ marginTop: 40 }}>
-            <Quote textSize={36}>
+            <Quote textSize={36} textColor='secondary' style={{ borderColor: 'white' }}>
               Em linguística, a semântica estuda o{' '}
               <S type='bold' textColor='tertiary'>
                 significado
@@ -278,7 +288,7 @@ const Presentation = () => {
               de uma palavra, de um signo, de uma frase ou de uma expressão em um determinado{' '}
               <S type='bold' textColor='tertiary'>
                 contexto
-              </S>{' '}
+              </S>
               .
             </Quote>
           </BlockQuote>
@@ -291,7 +301,7 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide contentStyles={{ maxHeight: '100%' }} bgColor='secondary'>
+      <Slide contentStyles={{ maxHeight: '100%' }}>
         <Layout style={{ maxHeight: 'inherit', position: 'relative' }}>
           <Fill>
             <HolyGrailLayout>
@@ -309,8 +319,8 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           De que forma um
           <br />
           HTML semântico ajuda
@@ -319,8 +329,8 @@ const Presentation = () => {
         </Heading>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ maxWidth: 1150 }}>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide contentStyles={{ maxWidth: 1150 }}>
+        <Heading size={1} fit caps>
           HTML Semântico = Contexto para screen readers
         </Heading>
 
@@ -349,10 +359,10 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ height: '100%', maxWidth: 980 }}>
+      <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
-            <Heading size={1} fit caps textColor='tertiary'>
+            <Heading size={1} fit caps>
               Navegação com teclado funcionando por padrão
             </Heading>
           </Fit>
@@ -365,12 +375,12 @@ const Presentation = () => {
         </Layout>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           WAI-ARIA
         </Heading>
 
-        <Heading size={1} fit caps textColor='primary'>
+        <Heading size={1} fit caps textColor='secondary'>
           Web Accessibility Intiative - Accessible Rich Internet Applications
         </Heading>
 
@@ -382,14 +392,14 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Layout>
           <Fill>
             <Heading size={1} caps textSize={40} textAlign='left'>
               Aria Attributes
             </Heading>
 
-            <List textColor='primary'>
+            <List>
               <ListItem>aria-label</ListItem>
               <ListItem>aria-hidden</ListItem>
               <ListItem>aria-controls</ListItem>
@@ -404,7 +414,7 @@ const Presentation = () => {
               Aria Roles
             </Heading>
 
-            <List textColor='primary'>
+            <List>
               <ListItem>button</ListItem>
               <ListItem>link</ListItem>
               <ListItem>checkbox</ListItem>
@@ -425,8 +435,8 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ maxWidth: 1260 }}>
-        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide contentStyles={{ maxWidth: 1260 }}>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
           Agregando valor à informação do HTML
         </Heading>
 
@@ -444,14 +454,14 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Dicas de CSS para acessibilidade
         </Heading>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} textSize={66} caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide>
+        <Heading size={1} textSize={66} caps style={{ paddingBottom: 10 }}>
           Não remova o outline de elementos clicáveis
         </Heading>
 
@@ -466,19 +476,19 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
           Se mesmo assim deseja remover o outline
         </Heading>
 
         <Layout>
           <Fill>
-            <Text textColor='primary' textSize={18} textAlign='left'>
+            <Text textColor='secondary' textSize={18} textAlign='left'>
               Não use isso:{' '}
             </Text>
           </Fill>
           <Fill style={{ marginLeft: 20 }}>
-            <Text textColor='primary' textSize={18} textAlign='left'>
+            <Text textColor='secondary' textSize={18} textAlign='left'>
               Use isso:{' '}
             </Text>
           </Fill>
@@ -513,12 +523,12 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
           Não modifique a ordem lógica do HTML via CSS
         </Heading>
 
-        <Text textColor='primary' textSize={24}>
+        <Text textColor='secondary' textSize={24}>
           Propriedades de CSS que alteram a ordem em que os elementos são exibidos (como float,
           order ou flex-direction) podem até ser úteis, mas fazem com que o conteúdo da página não
           siga uma ordem lógica quando consumido pelo teclado ou por tecnologia assistiva.
@@ -534,20 +544,20 @@ const Presentation = () => {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
           Use a propriedade "content" somente para fins visuais
         </Heading>
 
         <ContentText />
 
-        <Text textColor='primary' textSize={24} style={{ paddingTop: 20 }}>
+        <Text textColor='secondary' textSize={24} style={{ paddingTop: 20 }}>
           Mas todo texto que é setado via content não é selecionável, e também "não existe" para
           tecnologias assistivas
         </Text>
 
         <Appear>
-          <Text textColor='primary' textSize={24} style={{ paddingTop: 20 }}>
+          <Text textColor='secondary' textSize={24} style={{ paddingTop: 20 }}>
             Inclusive, a palavra "pseudo" em azul nesse slide é setada via content, tente selecionar
             ou copiar o texto dela ela
           </Text>
@@ -556,8 +566,8 @@ const Presentation = () => {
         <Notes>Ênfase no PSEUDO, por que o elemento literalmente não existe</Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Media query assistiva: prefers-reduced-motion
         </Heading>
 
@@ -598,10 +608,10 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Layout>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
-            <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 5 }}>
+            <Heading size={1} fit caps style={{ paddingBottom: 5 }}>
               Media query assistiva: prefers-reduced-motion
             </Heading>
           </Fit>
@@ -614,8 +624,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Layout>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
           Desativando todas as transitions/animations do site
         </Heading>
 
@@ -641,12 +651,12 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
           Casos de uso de prefers-reduced-motion
         </Heading>
 
-        <List textColor='primary'>
+        <List>
           <ListItem>Desativar transições/animações do site</ListItem>
           <ListItem>Desativar smooth scroll</ListItem>
           <ListItem>Trocar um vídeo por uma imagem estática</ListItem>
@@ -654,12 +664,12 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </List>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 10 }}>
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
           Outras media-queries assistivas
         </Heading>
 
-        <List textColor='primary'>
+        <List>
           <ListItem>prefers-reduced-transparency</ListItem>
           <ListItem>prefers-contrast</ListItem>
           <ListItem>prefers-color-scheme</ListItem>
@@ -677,10 +687,10 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Layout style={{ flexDirection: 'column' }}>
           <Fit>
-            <Heading size={1} fit caps textColor='tertiary' style={{ paddingBottom: 5 }}>
+            <Heading size={1} fit caps style={{ paddingBottom: 5 }}>
               Como escrever um alt acessível?
             </Heading>
           </Fit>
@@ -708,7 +718,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>O alt serve também pra quando a imagem não carrega por algum motivo</Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <ExcessiveAltExample />
 
         <Notes>
@@ -716,48 +726,47 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ height: '100%' }}>
+      <Slide contentStyles={{ height: '100%' }}>
         <IrrelevantAltExample />
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Em busca do alt perfeito
         </Heading>
 
-        <Text textColor='primary' textSize={36} style={{ marginTop: 20 }}>
+        <Text textColor='secondary' textSize={36} style={{ marginTop: 20 }}>
           Adicione um ponto final na descrição da imagem
         </Text>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Em busca do alt perfeito
         </Heading>
 
-        <Text textColor='primary' textSize={36} style={{ marginTop: 20 }}>
+        <Text textColor='secondary' textSize={36} style={{ marginTop: 20 }}>
           Não precisa adicionar "Foto de..." ou "Imagem de..." no começo do texto de alt
         </Text>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Em busca do alt perfeito
         </Heading>
 
-        <Text textColor='primary' textSize={36} style={{ marginTop: 20 }}>
+        <Text textColor='secondary' textSize={36} style={{ marginTop: 20 }}>
           Entenda o contexto da imagem na página, e só depois disso descreva ela
         </Text>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Contexto da imagem? What?
         </Heading>
       </Slide>
 
       <Slide
-        bgColor='secondary'
         contentStyles={{
           overflow: 'auto',
           maxHeight: '100%',
@@ -771,12 +780,12 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <ContextualImageAlt />
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Forneça alternativa à conteúdos de texto
         </Heading>
 
-        <Text textColor='primary' style={{ paddingTop: 20 }}>
+        <Text textColor='secondary' style={{ paddingTop: 20 }}>
           Adicionar imagens que complementam a explicação de um texto (como um artigo ou tutorial)
           auxilia pessoas com{' '}
           <S type='bold' textColor='tertiary'>
@@ -789,12 +798,12 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Text>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Ferramentas (para devs)
         </Heading>
 
-        <List textColor='primary'>
+        <List>
           <ListItem>
             <Link
               target='_blank'
@@ -850,12 +859,12 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>Reach UI - Componentes pensados exclusivamente em A11Y/UX (link)</Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Boas Práticas - Não desabilite o zoom da página
         </Heading>
 
-        <Text fit textColor='primary' textSize={21}>
+        <Text fit textColor='secondary' textSize={21}>
           Não tire o poder do usuário decidir o tamanho das coisas na tela
         </Text>
 
@@ -870,14 +879,14 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
           <Fit>
-            <Heading size={1} fit caps textColor='tertiary'>
+            <Heading size={1} fit caps>
               Boas Práticas - Tamanho importa
             </Heading>
 
-            <Text textColor='primary' textSize={24}>
+            <Text textColor='secondary' textSize={24}>
               Dimensione corretamente as áreas de toque do site
             </Text>
           </Fit>
@@ -906,10 +915,11 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>O Chrome/Safari dão zoom quando uma área de toque muito pequena é tocada</Notes>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ height: '100%', maxWidth: 980 }}>
+      {/* TODO botar pesquisa de to pimp a butterfly */}
+      <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
-            <Heading size={1} fit caps textColor='tertiary'>
+            <Heading size={1} fit caps>
               Boas Práticas - Skip to content link
             </Heading>
           </Fit>
@@ -922,12 +932,12 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Layout>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Boas Práticas - Smooth scroll
         </Heading>
 
-        <Text textColor='primary' textAlign='left' style={{ paddingTop: 30 }}>
+        <Text textColor='secondary' textAlign='left' style={{ paddingTop: 30 }}>
           Faça uma animação rápida, ou não use animação.
           <br />
           <br />
@@ -938,16 +948,16 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Text>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
-            <Heading size={1} fit caps textColor='tertiary'>
+            <Heading size={1} fit caps>
               Boas Práticas - Dê feedback instantâneo ao usuário
             </Heading>
           </Fit>
 
           <Fill style={{ paddingTop: 50 }}>
-            <img src='./images/immediate-feedback.gif' alt='Comparação de feedback instantâneo' />
+            <ImmediateFeedback />
           </Fill>
 
           <Notes>
@@ -957,8 +967,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Layout>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Boas Práticas - Não dê um tempo determinado
           <br />
           para o usuário finalizar uma tarefa
@@ -970,8 +980,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Boas Práticas - Não leve em conta que você sabe
           <br /> por onde e como o usuário acessa seu site
         </Heading>
@@ -979,15 +989,12 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>Sempre vai ter um usuário que vai te provar o contrário</Notes>
       </Slide>
 
-      <Slide bgColor='secondary'>
+      <Slide>
         <Heading fit size={1} textSize={48} caps textColor='tertiary'>
           Modelo de celular ou nome de pokémon?
         </Heading>
 
-        <List
-          textColor='primary'
-          style={{ display: 'flex', flexFlow: 'column wrap', maxHeight: 460 }}
-        >
+        <List style={{ display: 'flex', flexFlow: 'column wrap', maxHeight: 460 }}>
           <ListItem>Bluboo</ListItem>
           <ListItem>Aquaris</ListItem>
           <ListItem>Caterpillar</ListItem>
@@ -1010,14 +1017,14 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>Dados do Analytics de Arezzo durante o período de 1 mês</Notes>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ maxWidth: 1150 }}>
+      <Slide contentStyles={{ maxWidth: 1150 }}>
         <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
           <Fit>
-            <Heading size={1} fit caps textColor='tertiary'>
+            <Heading size={1} fit caps>
               Boas Práticas - Teste em ferramentas reais, você mesmo
             </Heading>
 
-            <Text textColor='primary' textSize={24} style={{ paddingTop: 10, paddingBottom: 20 }}>
+            <Text textColor='secondary' textSize={24} style={{ paddingTop: 10, paddingBottom: 20 }}>
               Lighthouse está aí pra ajudar, mas não confie cegamente no score dele quando se trata
               de acessibilidade.{' '}
               <Link
@@ -1053,28 +1060,28 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Layout>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Boas Práticas - Teste em ferramentas reais
         </Heading>
 
-        <Text textColor='primary' textAlign='left' style={{ paddingTop: 30 }}>
+        <Text textColor='secondary' textAlign='left' style={{ paddingTop: 30 }}>
           Screen readers mais usados:
         </Text>
 
-        <List textColor='primary'>
+        <List>
           <ListItem>JAWS e NVDA (Windows)</ListItem>
           <ListItem>TalkBack (Android)</ListItem>
           <ListItem>VoiceOver (iOS)</ListItem>
         </List>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Boas Práticas - Teste TUDO
         </Heading>
 
-        <Text textColor='primary' textAlign='left' style={{ paddingTop: 30 }}>
+        <Text textColor='secondary' textAlign='left' style={{ paddingTop: 30 }}>
           É comum dar atenção somente à partes mais importantes do site quando se faz teste de
           acessibilidade.
           <br />
@@ -1087,13 +1094,18 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Text>
       </Slide>
 
-      <Slide bgColor='secondary'>
-        <Heading size={1} fit caps textColor='tertiary'>
+      <Slide>
+        <Heading size={1} fit caps>
           Não existe "site meio acessível"
         </Heading>
+
+        <Notes>
+          Fazer um "site meio acessível" é o mesmo que construir uma rampa pra cadeirantes e ela ser
+          assim
+        </Notes>
       </Slide>
 
-      <Slide bgColor='secondary' contentStyles={{ padding: 0 }}>
+      <Slide contentStyles={{ padding: 0 }}>
         <img
           src='./images/half-accessible.jpg'
           alt='Rampa de deficiente não acessível'

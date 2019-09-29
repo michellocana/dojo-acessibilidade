@@ -22,7 +22,7 @@ const IrrelevantAltExample = props => {
             Em busca do alt perfeito
           </Heading>
 
-          <Text textColor='primary' textSize={36} style={{ marginBottom: 20 }}>
+          <Text textColor='secondary' textSize={36} style={{ marginBottom: 20 }}>
             Adicione algo que seja de fato relevante
           </Text>
         </Fit>
@@ -49,7 +49,7 @@ const IrrelevantAltExample = props => {
                     backgroundColor: isGreenBox ? '#28a745' : '#dc3545'
                   }}
                 >
-                  <Text textColor='primary' textSize={24}>
+                  <Text textColor='secondary' textSize={24}>
                     {text}
                   </Text>
                 </motion.div>

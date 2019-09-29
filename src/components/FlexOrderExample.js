@@ -10,7 +10,7 @@ const FlexOrderExample = () => {
   return (
     <FocusTrap>
       <div className={styles.wrapper}>
-        <Text textColor='primary' textSize={24} style={{ paddingTop: 20 }}>
+        <Text textColor='secondary' textSize={24} style={{ paddingTop: 20 }}>
           flex-direction: row ✔️
         </Text>
         <div className={styles.container}>
@@ -21,7 +21,7 @@ const FlexOrderExample = () => {
           <Button theme='blue'>Button 3</Button>
         </div>
 
-        <Text textColor='primary' textSize={24} style={{ paddingTop: 20 }}>
+        <Text textColor='secondary' textSize={24} style={{ paddingTop: 20 }}>
           flex-direction: row-reverse ❌
         </Text>
 

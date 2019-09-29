@@ -18,7 +18,7 @@ const OutlineExample = () => {
   return (
     <FocusTrap>
       <div>
-        <Text textSize={32} textColor='primary' style={{ paddingTop: 40, paddingBottom: 20 }}>
+        <Text textSize={32} textColor='secondary' style={{ paddingTop: 40, paddingBottom: 20 }}>
           {text}
         </Text>
 

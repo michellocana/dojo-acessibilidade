@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: '';
+  background: #1f2022;
+  width: 71px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

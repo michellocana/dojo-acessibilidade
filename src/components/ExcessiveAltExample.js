@@ -23,7 +23,7 @@ const ExcessiveAltExample = props => {
             Em busca do alt perfeito
           </Heading>
 
-          <Text textColor='primary' textSize={36} style={{ marginBottom: 20 }}>
+          <Text textColor='secondary' textSize={36} style={{ marginBottom: 20 }}>
             Saiba o quanto de detalhamento o alt deve ter
           </Text>
         </Fit>
@@ -43,7 +43,7 @@ const ExcessiveAltExample = props => {
                     backgroundColor: isGreenBox ? '#28a745' : '#dc3545'
                   }}
                 >
-                  <Text fit={isGreenBox} textColor='primary' textSize={24}>
+                  <Text fit={isGreenBox} textColor='secondary' textSize={24}>
                     {text}
                   </Text>
                 </motion.div>
