@@ -39,12 +39,13 @@ import AltExample from './components/AltExample'
 import ExcessiveAltExample from './components/ExcessiveAltExample'
 import IrrelevantAltExample from './components/IrrelevantAltExample'
 import ImmediateFeedback from './components/ImmediateFeedback'
+import ColorBlindnessExample from './components/ColorBlindnessExample'
 
 const theme = createTheme(
   {
     primary: '#1F2022', // 'white',
     secondary: 'white', // '#1F2022',
-    tertiary: '#03A9FC', // '#03A9FC',
+    tertiary: '#35BAFD', // '#03A9FC',
     quaternary: '#CECECE' // '#CECECE'
   },
   {
@@ -63,8 +64,14 @@ const Presentation = () => {
       showFullscreenControl={false}
       progress='bar'
     >
-      <Slide bgColor='primary'>
-        <Heading size={1} fit caps>
+      <Slide
+        bgImage='./images/background.jpg'
+        style={{
+          backgroundBlendMode: 'multiply',
+          backgroundColor: 'rgb(43, 78, 255)'
+        }}
+      >
+        <Heading size={1} fit caps textColor='secondary'>
           Acessibilidade Web
         </Heading>
 
@@ -256,8 +263,8 @@ const Presentation = () => {
         </Heading>
 
         <Text textColor='secondary'>
-          1 a cada 7 pessoas no mundo tem algum tipo de desabilidade em algum nível, seja ela
-          visual, motora, auditiva ou cognitiva
+          1 a cada 7 pessoas no mundo tem algum tipo de deficiência em algum nível, seja ela visual,
+          motora, auditiva ou cognitiva
         </Text>
 
         <Notes>
@@ -1110,9 +1117,144 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           src='./images/half-accessible.jpg'
           alt='Rampa de deficiente não acessível'
           style={{
-            maxHeight: 'inherit'
+            maxHeight: 650
           }}
         />
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          Acessibilidade no Design
+        </Heading>
+      </Slide>
+
+      <Slide>
+        <Layout style={{ flexDirection: 'column' }}>
+          <Fit>
+            <Heading size={1} fit caps>
+              Tamanho de fonte
+            </Heading>
+
+            <Text fit textColor='secondary'>
+              É recomendado no mínimo 16px de tamanho de fonte
+            </Text>
+          </Fit>
+
+          <Fill style={{ paddingTop: 30 }}>
+            <img
+              src='./images/small-font-size-zoom.gif'
+              alt='Exemplo de zoom em input com tamanho de fonte abaixo do aceitável'
+            />
+          </Fill>
+
+          <Notes>
+            No safari, quando um elemento clicável é clicado e ele não tem um font-size de no mínimo
+            16px, é dado zoom automaticamente
+          </Notes>
+        </Layout>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          Contraste de cores
+        </Heading>
+
+        <Text fit textColor='secondary'>
+          Um bom contraste de cores (ou a falta dele) influencia <br />
+          pessoas com baixa visão ou daltonismo
+        </Text>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          O que define o nível de contraste entre 2 cores?
+        </Heading>
+
+        <Notes>É a diferença do nível de luminosidade entre 2 cores</Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          E como eu descubro isso?
+        </Heading>
+      </Slide>
+
+      <Slide>
+        <Text textColor='secondary' style={{ paddingBottom: 20 }}>
+          (L1 + 0.05) / (L2 + 0.05)
+        </Text>
+
+        <Appear>
+          <img src='./images/relative-luminance-formula.png' alt='' />
+        </Appear>
+      </Slide>
+
+      <Slide contentStyles={{ height: '100%', padding: '30px 0' }}>
+        <Layout
+          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
+        >
+          <Fit>
+            <Heading size={1} fit caps>
+              Ou pode usar um contrast checker
+            </Heading>
+          </Fit>
+
+          <Fit>
+            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+              <source src='./videos/contrast-checker.webm' type='video/webm' />
+            </video>
+          </Fit>
+        </Layout>
+
+        <Notes>
+          <List>
+            <ListItem>O valor vai de 1 até 21</ListItem>
+
+            <ListItem>O valor pode variar de acordo com o tamanho do texto</ListItem>
+
+            <ListItem>
+              Dica para testar o contraste: se estiver no celular, tente baixar o brilho da tela
+            </ListItem>
+          </List>
+        </Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
+          Pensando em deficiências - Daltonismo
+        </Heading>
+
+        <ColorBlindnessExample />
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
+          Não leve em conta que todos usuários
+          <br />
+          daltônicos enxergam tudo preto e branco
+        </Heading>
+
+        <img
+          src='./images/daltonism-types.png'
+          alt='Tipos de daltonismo'
+          style={{ maxWidth: '100%' }}
+        />
+
+        <Notes>A monocromacia é o tipo mais raro de daltonismo (1:30000)</Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 15 }}>
+          Pensando em deficiências - Campo de visão baixo
+        </Heading>
+
+        <img
+          src='./images/low-scope-of-vision.png'
+          alt='Exemplo de campo de visão baixo'
+          style={{ maxWidth: '100%' }}
+        />
+
+        <Notes>Manter informações relacionadas perto umas das outras</Notes>
       </Slide>
     </Deck>
   )
