@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 
 import {
@@ -40,6 +41,7 @@ import ExcessiveAltExample from './components/ExcessiveAltExample'
 import IrrelevantAltExample from './components/IrrelevantAltExample'
 import ImmediateFeedback from './components/ImmediateFeedback'
 import ColorBlindnessExample from './components/ColorBlindnessExample'
+import ComponentWithAccessibilityIssues from './components/ComponentWithAccessibilityIssues'
 
 const theme = createTheme(
   {
@@ -1255,6 +1257,377 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         />
 
         <Notes>Manter informações relacionadas perto umas das outras</Notes>
+      </Slide>
+
+      <Slide contentStyles={{ height: '100%', padding: '40px 0' }}>
+        <Layout
+          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
+        >
+          <Fit>
+            <Heading size={1} fit caps>
+              Pensando em deficiências - Desabilidades cognitivas
+            </Heading>
+          </Fit>
+
+          <Fit>
+            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+              <source src='./videos/spell-checking.webm' type='video/webm' />
+            </video>
+          </Fit>
+        </Layout>
+
+        <Notes>
+          Sim... na maioria das vezes é difícil de implementar, mas pode ajudar pessoas com dislexia
+          ou baixa escolaridade
+        </Notes>
+      </Slide>
+
+      <Slide contentStyles={{ height: '100%' }}>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
+          <Fit>
+            <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
+              Mantenha o usuário engajado - Evite distrações
+            </Heading>
+          </Fit>
+
+          <Fit
+            style={{
+              flex: 'none',
+              height: 500,
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+          >
+            <video
+              loop
+              autoPlay
+              style={{
+                width: '100%',
+                height: '130%',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                margin: 'auto'
+              }}
+            >
+              <source
+                src='./videos/how-it-feels-to-browse-a-website-in-2019.mp4'
+                type='video/mp4'
+              />
+            </video>
+          </Fit>
+        </Layout>
+
+        <Notes>Poucas distrações beneficiam usuários com déficit de atenção ou ansiedade</Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          Forneça um vocabulário simples...
+          <br />
+          sempre que possível evite:
+        </Heading>
+
+        <List>
+          <ListItem>Metáforas: Pode confudir usuários com autismo</ListItem>
+          <ListItem>
+            Abreviações/acrônimos: Se usar, forneça o significado da sigla ou da abreviação (usando
+            a tag
+            <S type='bold' textColor='tertiary'>
+              {' <abbr>'}
+            </S>{' '}
+            por exemplo)
+          </ListItem>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 15 }}>
+          Evite erros ortográficos propositais
+        </Heading>
+
+        <img
+          style={{ maxWidth: '100%' }}
+          alt='Erro ortográfico proposital'
+          src='./images/erro-ortografico-proposital.png'
+        />
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 15 }}>
+          GAIA - Guia de Acessibilidade de Interfaces para Autismo
+        </Heading>
+
+        <img
+          style={{ maxWidth: '100%' }}
+          alt='Erro ortográfico proposital'
+          src='./images/projeto-gaia.png'
+        />
+
+        <Notes>
+          Trabalho de mestrado da Talita Pagani, para guiar as pessoas a construir interfaces
+          amigáveis para usuários com autismo
+        </Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
+          Boas Práticas - Forneça texto para links <br />
+          que sejam auto-explicativos
+        </Heading>
+
+        <Layout>
+          <Fill>
+            ❌
+            <Text textColor='secondary' style={{ marginTop: 10 }}>
+              <Link href='http://google.com' textColor='tertiary'>
+                Clique aqui
+              </Link>{' '}
+              para ler sobre a empresa
+            </Text>
+          </Fill>
+
+          <Fill>
+            ✔️
+            <Text textColor='secondary' style={{ marginTop: 10 }}>
+              Para saber mais sobre a empresa,{' '}
+              <Link href='http://google.com' textColor='tertiary'>
+                acesse a página "sobre nós"
+              </Link>
+            </Text>
+          </Fill>
+        </Layout>
+
+        <Notes>
+          Alguns leitores de tela como NVDA tem uma funcionalidade de lista todos os links
+          disponíveis na página, para facilitar a navegação...
+          <br />
+          <br />
+          ...essa funcionalidade não servirá de nada se os links da página tiverem textos genéricos
+          como "clique aqui"
+        </Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
+          Boas Práticas - Use corretamente placeholders
+        </Heading>
+
+        <div style={{ position: 'relative' }}>
+          <img
+            src='./images/placeholder-as-label.jpg'
+            alt='Placeholder usado como label'
+            style={{ maxWidth: '100%' }}
+          />
+
+          <Appear>
+            <img
+              src='./images/placeholder-as-example.jpg'
+              alt='Placeholder usado como exemplo'
+              style={{ maxWidth: '100%', position: 'absolute', top: 0, left: 0 }}
+            />
+          </Appear>
+        </div>
+
+        <Notes>
+          Não use placeholder como único indicativo de input
+          <br />
+          <br />
+          Não adicione exemplo de valor de campo como placeholder
+        </Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
+          Boas Práticas - Manere no Parallax
+        </Heading>
+
+        <Text textColor='secondary' textSize={40}>
+          Sim, parallax foi um design trend muito usado no passado, e ainda é um pouco até hoje mas
+          ao mesmo tempo que (se usado da forma correta) ele pode deixar a experiência do usuário
+          mais interessante e atrativa, ele pode prejudicar a experiência de outros usuários
+        </Text>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
+          Boas Práticas - Manere no Parallax
+        </Heading>
+
+        <Text textColor='secondary' textSize={40}>
+          Segundo um estudo, 35% dos adultos acima de 40 anos possuem em algum grau, algum tipo de
+          disfunção vestibular, que é uma disfunção que afeta o ouvido interno e partes do cérebro.
+        </Text>
+
+        <br />
+
+        <Appear>
+          <Text textColor='secondary' textSize={40}>
+            Entre outros sintomas, essa disfunção pode causar tonturas e perda de equilibrio.
+          </Text>
+        </Appear>
+
+        <br />
+
+        <Appear>
+          <Text textColor='secondary' textSize={40}>
+            Sintomas esses que, podem serem induzidos por vários motivos, um deles, ao ver várias
+            coisas se mexendo em velocidades diferentes, em primeiro e segundo plano (também
+            conhecido como parallax).
+          </Text>
+        </Appear>
+
+        <Notes>
+          Isso não quer dizer que o parallax tenha que deixar de ser usado, mas só que deve ser
+          usado com cuidado, e de forma sútil
+        </Notes>
+      </Slide>
+
+      <Slide progressColor='transparent'>
+        <ComponentWithAccessibilityIssues />
+      </Slide>
+
+      <Slide contentStyles={{ height: '100%', padding: '40px 0' }}>
+        <Layout
+          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
+        >
+          <Fit>
+            <Heading size={1} fit caps>
+              Quebra de expectativa - Esse é só um
+              <br />
+              dos problemas de usar modal
+            </Heading>
+          </Fit>
+
+          <Fit>
+            <video style={{ height: 490 }} autoPlay loop>
+              <source src='./videos/auto-open-modal.mp4' type='video/mp4' />
+            </video>
+          </Fit>
+        </Layout>
+
+        <Notes>
+          Modais que abrem sozinha, como ao entrar numa página ou antes de sair, geram uma quebra de
+          expectativa e podem ser uma situação de stress para quem tem autismo
+        </Notes>
+      </Slide>
+
+      <Slide contentStyles={{ height: '100%', padding: '40px 0' }}>
+        <Layout
+          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
+        >
+          <Fit>
+            <Heading size={1} fit caps>
+              Problemas de modais - A maioria não
+              <br />
+              possui controle de foco (focus trap)
+            </Heading>
+          </Fit>
+
+          <Fit>
+            <video style={{ height: 490 }} autoPlay loop>
+              <source src='./videos/modal-focus-trap.mp4' type='video/mp4' />
+            </video>
+          </Fit>
+        </Layout>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
+          Problemas de modais - Não seguem
+          <br />o fluxo de conteúdo do site
+        </Heading>
+
+        <Text textColor='secondary'>
+          Dependendo do layout, modais pode serem vistas como uma página por si só, e usuários com
+          deficiências cognitivas podem tentar aperta o botão de voltar página e não ter o resultado
+          esperado
+        </Text>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          Problemas de Carousel
+        </Heading>
+
+        <List>
+          <ListItem>Autoplay é complicado...</ListItem>
+
+          <ListItem>
+            A maioria dos plugins não tem uma navegação com teclado decente/suporte para screen
+            readers
+          </ListItem>
+
+          <ListItem>Conteúdo de difícil descoberta</ListItem>
+
+          <ListItem>
+            <Link href='http://shouldiuseacarousel.com/' target='_blank' textColor='tertiary'>
+              shouldiuseacarousel.com
+            </Link>
+          </ListItem>
+        </List>
+
+        <Notes>
+          Autoplay sem pause quando tá com mouse em cima. Isso pode ser prejudicial para usuários
+          com dislexia/deficit de atenção.
+          <br />
+          <br />
+          Difícil descoberta de conteúdo - Impacta acessibilidade e engajamento dos usuários
+        </Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          Problemas de Tooltip
+        </Heading>
+
+        <List>
+          <ListItem>Dificulta/impossibilita navegação com teclado</ListItem>
+          <ListItem>Fraca UX em dispositivos móveis</ListItem>
+          <ListItem>Só serve para guardar quantidades pequenas de informação</ListItem>
+          <ListItem>Não deve ser usada para informações cruciais pro usuário</ListItem>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
+          Ferramentas (para designers)
+        </Heading>
+
+        <List>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://chrome.google.com/webstore/search/NoCoffee%20Vision%20Simulator?hl=en&gl=US'
+            >
+              NoCoffee
+            </Link>{' '}
+            (extensão para o Chrome)
+          </ListItem>
+
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://www.aditus.io/button-contrast-checker/'
+            >
+              Button Contrast Checker
+            </Link>
+          </ListItem>
+
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://havecamerawilltravel.com/photographer/simulate-colorblindness-photos-photoshop/'
+            >
+              Simulando daltonismo no Photoshop
+            </Link>
+          </ListItem>
+        </List>
       </Slide>
     </Deck>
   )
