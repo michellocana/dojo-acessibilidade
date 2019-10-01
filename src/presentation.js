@@ -27,6 +27,7 @@ import 'normalize.css'
 
 import ComponentToStringService from './services/ComponentToString'
 
+import IntroBackground from './components/IntroBackground'
 import HolyGrailLayout from './components/HolyGrailLayout'
 import NonSemanticHtmlExamples from './components/NonSemanticHtmlExamples'
 import SemanticHtmlExamples from './components/SemanticHtmlExamples'
@@ -66,14 +67,10 @@ const Presentation = () => {
       showFullscreenControl={false}
       progress='bar'
     >
-      <Slide
-        bgImage='./images/background.jpg'
-        style={{
-          backgroundBlendMode: 'multiply',
-          backgroundColor: 'rgb(43, 78, 255)'
-        }}
-      >
-        <Heading size={1} fit caps textColor='secondary'>
+      <Slide>
+       <IntroBackground />
+
+        <Heading size={1} fit caps>
           Acessibilidade Web
         </Heading>
 
