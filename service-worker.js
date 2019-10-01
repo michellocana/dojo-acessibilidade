@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dojo-acessibilidade/presentation/precache-manifest.972811e4ba07bf417d5542f4ba51e193.js"
+  "/dojo-acessibilidade/precache-manifest.e2737d6a18c02742f032862a1085a9ad.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/dojo-acessibilidade/presentation/index.html", {
+workbox.routing.registerNavigationRoute("/dojo-acessibilidade/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
