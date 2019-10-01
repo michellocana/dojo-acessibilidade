@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "cp -R build/* . && rm -rf build",
+    "postbuild": "cp -R build/* . && rm -rf build precache-manifest.*",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
