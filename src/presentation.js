@@ -43,6 +43,7 @@ import IrrelevantAltExample from './components/IrrelevantAltExample'
 import ImmediateFeedback from './components/ImmediateFeedback'
 import ColorBlindnessExample from './components/ColorBlindnessExample'
 import ComponentWithAccessibilityIssues from './components/ComponentWithAccessibilityIssues'
+import SoftwareDevelopmentCycle from './components/SoftwareDevelopmentCycle'
 
 const theme = createTheme(
   {
@@ -99,11 +100,7 @@ const Presentation = () => {
       </Slide>
 
       <Slide>
-        <Layout style={{ maxHeight: 'inherit' }}>
-          <Fill>
-            <Image src='./images/software-development-cycle.png' />
-          </Fill>
-        </Layout>
+        <SoftwareDevelopmentCycle />
 
         <Notes>
           Antes da implantação de um produto, ele passa por diversas etapas de um ciclo de vida, e

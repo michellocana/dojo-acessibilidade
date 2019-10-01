@@ -1,0 +1,14 @@
+.container {
+}
+
+.icon {
+  height: 100%;
+}
+
+.group {
+  transition: all 0.2s ease-in-out;
+}
+
+.isGrayscale {
+  filter: grayscale(1);
+}
