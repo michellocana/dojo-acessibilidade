@@ -944,7 +944,11 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           Faça uma animação rápida, ou não use animação.
           <br />
           <br />
-          Um scroll animado por muito tempo pode ser desagradável para pessoas com epilepsia.
+          Um scroll animado por muito tempo pode ser desagradável para pessoas com{' '}
+          <S textColor='tertiary' type='bold'>
+            epilepsia
+          </S>
+          .
           <br />
           <br />
           Segundo a WebAIM, o tempo máximo de smooth scroll deve ser de 250ms (1/4 de segundo).
@@ -1157,7 +1161,14 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
         <Text fit textColor='secondary'>
           Um bom contraste de cores (ou a falta dele) influencia <br />
-          pessoas com baixa visão ou daltonismo
+          pessoas com{' '}
+          <S textColor='tertiary' type='bold'>
+            baixa visão
+          </S>{' '}
+          ou{' '}
+          <S textColor='tertiary' type='bold'>
+            daltonismo
+          </S>
         </Text>
       </Slide>
 
@@ -1253,18 +1264,21 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>Manter informações relacionadas perto umas das outras</Notes>
       </Slide>
 
-      <Slide contentStyles={{ height: '100%', padding: '40px 0' }}>
+      {/* TODO ajustar esse slide */}
+      <Slide contentStyles={{ maxWidth: 1100, height: '100%', padding: '40px 0' }}>
         <Layout
           style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
         >
           <Fit>
-            <Heading size={1} fit caps>
-              Pensando em deficiências - Desabilidades cognitivas
+            <Heading size={1} fit caps textSize={36}>
+              Pensando em deficiências
+              <br />
+              Deficiências cognitivas - Spellcheck
             </Heading>
           </Fit>
 
           <Fit>
-            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+            <video style={{ width: '100%', height: 520 }} autoPlay loop>
               <source src='./videos/spell-checking.webm' type='video/webm' />
             </video>
           </Fit>
