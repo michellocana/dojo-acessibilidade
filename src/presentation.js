@@ -136,15 +136,15 @@ const Presentation = () => {
 
         <Layout style={{ marginTop: 20 }}>
           <Appear>
-            <Image margin={5} width='100%' src='./images/braille-reader.jpg' />
+            <Image style={{ maxWidth: '33%'}} margin={5} src='./images/braille-reader.jpg' />
           </Appear>
 
           <Appear>
-            <Image margin={5} width='100%' src='./images/eye-tracker.png' />
+            <Image style={{ maxWidth: '33%'}} margin={5} src='./images/eye-tracker.png' />
           </Appear>
 
           <Appear>
-            <Image margin={5} width='100%' src='./images/switch-access.jpg' />
+            <Image style={{ maxWidth: '33%'}} margin={5} src='./images/switch-access.jpg' />
           </Appear>
         </Layout>
 

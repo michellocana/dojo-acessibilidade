@@ -89,7 +89,12 @@ const SoftwareDevelopmentCycle = () => {
       </Fit>
 
       <Fit style={{ maxHeight: '81vh' }}>
-        <svg viewBox='0 0 1266 1265' xmlns='http://www.w3.org/2000/svg' className={styles.icon}>
+        <svg
+          viewBox='0 0 1266 1265'
+          xmlns='http://www.w3.org/2000/svg'
+          className={styles.icon}
+          style={{ maxHeight: '81vh' }}
+        >
           <g id='planning' className={planningClassName}>
             <path
               d='M632.5 302.68C572.324 302.68 515.916 318.811 467.364 346.985L316 84.8164C505.379 -24.2822 746.158 -32.2258 949.046 84.9117L797.713 347.029C749.143 318.828 692.708 302.68 632.5 302.68Z'
