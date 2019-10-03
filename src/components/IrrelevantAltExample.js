@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Appear, Anim, Text, Fill, Layout, Fit, Heading } from 'spectacle'
+import { Appear, Anim, Text, Layout, Fit, Heading } from 'spectacle'
 
 import styles from './IrrelevantAltExample.module.css'
 
@@ -16,7 +16,9 @@ const IrrelevantAltExample = props => {
 
   return (
     <>
-      <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
+      <Layout
+        style={{ flex: 1, flexDirection: 'column', height: '100%', justifyContent: 'center' }}
+      >
         <Fit>
           <Heading size={1} fit caps textColor='tertiary'>
             Em busca do alt perfeito
@@ -27,20 +29,14 @@ const IrrelevantAltExample = props => {
           </Text>
         </Fit>
 
-        <Fill>
-          <div style={{ position: 'relative', display: 'flex', width: '100%', height: '100%' }}>
+        <Fit>
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
             <img
-              src='./images/irrelevant-alt-example.jpg'
               alt=''
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                position: 'absolute',
-                top: 0,
-                left: 0
-              }}
+              src='./images/irrelevant-alt-example.jpg'
+              style={{ width: '100%', maxHeight: '70vh', objectFit: 'cover' }}
             />
+
             <Appear>
               <div>
                 <motion.div
@@ -56,7 +52,7 @@ const IrrelevantAltExample = props => {
               </div>
             </Appear>
           </div>
-        </Fill>
+        </Fit>
       </Layout>
 
       <Anim

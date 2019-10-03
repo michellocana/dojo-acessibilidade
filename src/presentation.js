@@ -363,15 +363,22 @@ const Presentation = () => {
       </Slide>
 
       <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
-        <Layout style={{ height: '100%', flexDirection: 'column', padding: '40px 0', justifyContent: 'space-between' }}>
-          <Fit>
+        <Layout
+          style={{
+            height: '100%',
+            flexDirection: 'column',
+            padding: '20px 0',
+            justifyContent: 'space-between'
+          }}
+        >
+          <Fit style={{ paddingBottom: 10 }}>
             <Heading size={1} fit caps>
               Navegação com teclado funcionando por padrão
             </Heading>
           </Fit>
 
-          <Fill style={{ maxHeight: 540 }}>
-            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+          <Fill>
+            <video style={{ width: '100%', height: '100%', maxHeight: '84vh' }} autoPlay loop>
               <source src='./videos/form-keyboard-navigation.mp4' type='video/mp4' />
             </video>
           </Fill>
@@ -569,7 +576,7 @@ const Presentation = () => {
         <Notes>Ênfase no PSEUDO, por que o elemento literalmente não existe</Notes>
       </Slide>
 
-      <Slide >
+      <Slide>
         <Heading size={1} fit caps>
           Media query assistiva: prefers-reduced-motion
         </Heading>
@@ -620,7 +627,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           </Fit>
 
           <Fill>
-            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+            <video style={{ width: '100%', maxHeight: '84vh' }} autoPlay loop>
               <source src='./videos/prefers-reduced-motion.mp4' type='video/mp4' />
             </video>
           </Fill>
@@ -822,8 +829,15 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       </Slide>
 
       <Slide contentStyles={{ height: 680, padding: '20px 0' }}>
-        <Layout style={{ flex: 1, flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
-          <Fit>
+        <Layout
+          style={{
+            flex: 1,
+            flexDirection: 'column',
+            height: '100%',
+            justifyContent: 'center'
+          }}
+        >
+          <Fit style={{ paddingBottom: 20 }}>
             <Heading size={1} fit caps>
               Boas Práticas - Tamanho importa
             </Heading>
@@ -833,13 +847,23 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             </Text>
           </Fit>
 
-          <Fit style={{ maxHeight: 520 }}>
-            <Layout>
+          <Fit
+            style={{
+              height: '75vh',
+              maxHeight: 520
+            }}
+          >
+            <Layout
+              style={{
+                height: 'inherit',
+                maxHeight: 'inherit'
+              }}
+            >
               <Fill>
                 <img
                   src='./images/tap-zone-wrong.svg'
                   alt='Área de toque errada.'
-                  style={{ margin: '0 20px' }}
+                  style={{ margin: '0 20px', maxHeight: '100%' }}
                 />
               </Fill>
 
@@ -847,7 +871,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 <img
                   src='./images/tap-zone-correct.svg'
                   alt='Área de toque correta.'
-                  style={{ margin: '0 20px' }}
+                  style={{ margin: '0 20px', maxHeight: '100%' }}
                 />
               </Fill>
             </Layout>
@@ -857,16 +881,16 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>O Chrome/Safari dão zoom quando uma área de toque muito pequena é tocada</Notes>
       </Slide>
 
-      <Slide contentStyles={{ height: '100%', maxWidth: 980,  padding: '40px 0' }}>
-        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between', }}>
-          <Fit>
+      <Slide contentStyles={{ height: '100%', maxWidth: 980, padding: '40px 0' }}>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
+          <Fit style={{ paddingBottom: 20 }}>
             <Heading size={1} fit caps>
               Boas Práticas - Skip to content link
             </Heading>
           </Fit>
 
-          <Fit style={{maxHeight: 550}}>
-            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+          <Fit style={{ maxHeight: 550 }}>
+            <video style={{ width: '100%', height: '77vh', maxHeight: 550 }} autoPlay loop>
               <source src='./videos/skip-to-content-link.webm' type='video/webm' />
             </video>
           </Fit>
@@ -983,13 +1007,18 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             </Text>
           </Fit>
 
-          <Fill>
+          <Fit
+            style={{
+              height: '67vh',
+              maxHeight: 500
+            }}
+          >
             <Layout style={{ margin: '0 -10px', alignItems: 'center' }}>
               <Fill style={{ padding: 10 }}>
                 <img
                   src='./images/lighthouse-1.png'
                   alt='Interface do Lighthouse aberta.'
-                  style={{ maxWidth: '100%' }}
+                  style={{ maxWidth: '100%', maxHeight: '67vh' }}
                 />
               </Fill>
 
@@ -997,11 +1026,11 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 <img
                   src='./images/lighthouse-2.png'
                   alt='Resultados de teste do Lighthouse.'
-                  style={{ maxWidth: '100%' }}
+                  style={{ maxWidth: '100%', maxHeight: '67vh' }}
                 />
               </Fill>
             </Layout>
-          </Fill>
+          </Fit>
         </Layout>
       </Slide>
 
@@ -1141,6 +1170,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
           <Fill style={{ paddingTop: 30 }}>
             <img
+              style={{ maxHeight: '65vh' }}
               src='./images/small-font-size-zoom.gif'
               alt='Exemplo de zoom em input com tamanho de fonte abaixo do aceitável'
             />
@@ -1191,22 +1221,20 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Text>
 
         <Appear>
-          <img src='./images/relative-luminance-formula.png' alt='' />
+          <img src='./images/relative-luminance-formula.png' alt='' style={{ maxHeight: '75vh' }} />
         </Appear>
       </Slide>
 
       <Slide contentStyles={{ height: '100%', padding: '30px 0' }}>
-        <Layout
-          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
-        >
-          <Fit>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
+          <Fit style={{ paddingBottom: 20 }}>
             <Heading size={1} fit caps>
               Ou pode usar um contrast checker
             </Heading>
           </Fit>
 
           <Fit>
-            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+            <video style={{ width: '100%', height: '82vh', maxHeight: 570 }} autoPlay loop>
               <source src='./videos/contrast-checker.webm' type='video/webm' />
             </video>
           </Fit>
@@ -1257,24 +1285,22 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <img
           src='./images/low-scope-of-vision.png'
           alt='Exemplo de campo de visão baixo'
-          style={{ maxWidth: '100%' }}
+          style={{ maxWidth: '100%', maxHeight: '76vh' }}
         />
 
         <Notes>Manter informações relacionadas perto umas das outras</Notes>
       </Slide>
 
       <Slide contentStyles={{ maxWidth: 1100, height: '100%', padding: '40px 0' }}>
-        <Layout
-          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
-        >
-          <Fit>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
+          <Fit style={{ paddingBottom: 20 }}>
             <Heading size={1} fit caps textSize={36}>
               Pensando em deficiências cognitivas - Spellcheck
             </Heading>
           </Fit>
 
           <Fit>
-            <video style={{ width: '100%', height: 540 }} autoPlay loop>
+            <video style={{ width: '100%', height: '72vh', maxHeight: 540 }} autoPlay loop>
               <source src='./videos/spell-checking.webm' type='video/webm' />
             </video>
           </Fit>
@@ -1286,8 +1312,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide contentStyles={{ height: '100%' }}>
-        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
+      <Slide style={{ padding: '40px 0' }}>
+        <Layout style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
           <Fit>
             <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
               Mantenha o usuário engajado - Evite distrações
@@ -1296,8 +1322,6 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
           <Fit
             style={{
-              flex: 'none',
-              height: 500,
               position: 'relative',
               overflow: 'hidden'
             }}
@@ -1307,13 +1331,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
               autoPlay
               style={{
                 width: '100%',
-                height: '130%',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                margin: 'auto'
+                height: '68vh',
+                maxHeight: 590
               }}
             >
               <source
@@ -1353,9 +1372,9 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Heading>
 
         <img
-          style={{ maxWidth: '100%' }}
           alt='Erro ortográfico proposital'
           src='./images/erro-ortografico-proposital.png'
+          style={{ maxWidth: '100%', maxHeight: 460, height: '72vh' }}
         />
       </Slide>
 
@@ -1365,9 +1384,9 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Heading>
 
         <img
-          style={{ maxWidth: '100%' }}
           alt='Erro ortográfico proposital'
           src='./images/projeto-gaia.png'
+          style={{ maxWidth: '100%', maxHeight: '82vh' }}
         />
 
         <Notes>
@@ -1494,10 +1513,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       </Slide>
 
       <Slide contentStyles={{ height: '100%', padding: '40px 0' }}>
-        <Layout
-          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
-        >
-          <Fit>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
+          <Fit style={{ paddingBottom: 20 }}>
             <Heading size={1} fit caps>
               Quebra de expectativa - Esse é só um
               <br />
@@ -1506,7 +1523,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           </Fit>
 
           <Fit>
-            <video style={{ height: 490 }} autoPlay loop>
+            <video style={{ height: '68vh', maxHeight: 490 }} autoPlay loop>
               <source src='./videos/auto-open-modal.mp4' type='video/mp4' />
             </video>
           </Fit>
@@ -1519,10 +1536,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       </Slide>
 
       <Slide contentStyles={{ height: '100%', padding: '40px 0' }}>
-        <Layout
-          style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
-        >
-          <Fit>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
+          <Fit style={{ paddingBottom: 20 }}>
             <Heading size={1} fit caps>
               Problemas de modais - A maioria não
               <br />
@@ -1531,7 +1546,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           </Fit>
 
           <Fit>
-            <video style={{ height: 490 }} autoPlay loop>
+            <video style={{ height: '68vh', maxHeight: 490 }} autoPlay loop>
               <source src='./videos/modal-focus-trap.mp4' type='video/mp4' />
             </video>
           </Fit>
