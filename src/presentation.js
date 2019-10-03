@@ -363,14 +363,14 @@ const Presentation = () => {
       </Slide>
 
       <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
-        <Layout style={{ height: '100%', flexDirection: 'column' }}>
+        <Layout style={{ height: '100%', flexDirection: 'column', padding: '40px 0', justifyContent: 'space-between' }}>
           <Fit>
             <Heading size={1} fit caps>
               Navegação com teclado funcionando por padrão
             </Heading>
           </Fit>
 
-          <Fill>
+          <Fill style={{ maxHeight: 540 }}>
             <video style={{ width: '100%', height: '100%' }} autoPlay loop>
               <source src='./videos/form-keyboard-navigation.mp4' type='video/mp4' />
             </video>
@@ -569,7 +569,7 @@ const Presentation = () => {
         <Notes>Ênfase no PSEUDO, por que o elemento literalmente não existe</Notes>
       </Slide>
 
-      <Slide>
+      <Slide >
         <Heading size={1} fit caps>
           Media query assistiva: prefers-reduced-motion
         </Heading>
@@ -611,7 +611,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Layout>
       </Slide>
 
-      <Slide>
+      <Slide contentStyles={{ maxWidth: 1100 }}>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
             <Heading size={1} fit caps style={{ paddingBottom: 5 }}>
@@ -803,67 +803,6 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
       <Slide>
         <Heading size={1} fit caps>
-          Ferramentas (para devs)
-        </Heading>
-
-        <List>
-          <ListItem>
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR'
-            >
-              Lighthouse
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://www.deque.com/axe/axe-for-web/'
-            >
-              Axe
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://www.npmjs.com/package/eslint-plugin-jsx-a11y'
-            >
-              eslint-plugin-jsx-a11y
-            </Link>
-          </ListItem>
-          <ListItem>
-            Devtools do{' '}
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://developers.google.com/web/tools/chrome-devtools/accessibility/reference'
-            >
-              Chrome
-            </Link>
-            /
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector'
-            >
-              Firefox
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link target='_blank' textColor='tertiary' href='https://ui.reach.tech/'>
-              Reach UI
-            </Link>
-          </ListItem>
-        </List>
-
-        <Notes>Reach UI - Componentes pensados exclusivamente em A11Y/UX (link)</Notes>
-      </Slide>
-
-      <Slide>
-        <Heading size={1} fit caps>
           Boas Práticas - Não desabilite o zoom da página
         </Heading>
 
@@ -882,8 +821,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide>
-        <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
+      <Slide contentStyles={{ height: 680, padding: '20px 0' }}>
+        <Layout style={{ flex: 1, flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
           <Fit>
             <Heading size={1} fit caps>
               Boas Práticas - Tamanho importa
@@ -894,13 +833,13 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             </Text>
           </Fit>
 
-          <Fill>
+          <Fit style={{ maxHeight: 520 }}>
             <Layout>
               <Fill>
                 <img
                   src='./images/tap-zone-wrong.svg'
                   alt='Área de toque errada.'
-                  style={{ margin: 20 }}
+                  style={{ margin: '0 20px' }}
                 />
               </Fill>
 
@@ -908,30 +847,29 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 <img
                   src='./images/tap-zone-correct.svg'
                   alt='Área de toque correta.'
-                  style={{ margin: 20 }}
+                  style={{ margin: '0 20px' }}
                 />
               </Fill>
             </Layout>
-          </Fill>
+          </Fit>
         </Layout>
 
         <Notes>O Chrome/Safari dão zoom quando uma área de toque muito pequena é tocada</Notes>
       </Slide>
 
-      {/* TODO botar pesquisa de to pimp a butterfly */}
-      <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
-        <Layout style={{ height: '100%', flexDirection: 'column' }}>
+      <Slide contentStyles={{ height: '100%', maxWidth: 980,  padding: '40px 0' }}>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between', }}>
           <Fit>
             <Heading size={1} fit caps>
               Boas Práticas - Skip to content link
             </Heading>
           </Fit>
 
-          <Fill>
+          <Fit style={{maxHeight: 550}}>
             <video style={{ width: '100%', height: '100%' }} autoPlay loop>
               <source src='./videos/skip-to-content-link.webm' type='video/webm' />
             </video>
-          </Fill>
+          </Fit>
         </Layout>
       </Slide>
 
@@ -944,7 +882,11 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           Faça uma animação rápida, ou não use animação.
           <br />
           <br />
-          Um scroll animado por muito tempo pode ser desagradável para pessoas com epilepsia.
+          Um scroll animado por muito tempo pode ser desagradável para pessoas com{' '}
+          <S textColor='tertiary' type='bold'>
+            epilepsia
+          </S>
+          .
           <br />
           <br />
           Segundo a WebAIM, o tempo máximo de smooth scroll deve ser de 250ms (1/4 de segundo).
@@ -1120,6 +1062,67 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
       <Slide>
         <Heading size={1} fit caps>
+          Ferramentas (para devs)
+        </Heading>
+
+        <List>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR'
+            >
+              Lighthouse
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://www.deque.com/axe/axe-for-web/'
+            >
+              Axe
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://www.npmjs.com/package/eslint-plugin-jsx-a11y'
+            >
+              eslint-plugin-jsx-a11y
+            </Link>
+          </ListItem>
+          <ListItem>
+            Devtools do{' '}
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://developers.google.com/web/tools/chrome-devtools/accessibility/reference'
+            >
+              Chrome
+            </Link>
+            /
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector'
+            >
+              Firefox
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link target='_blank' textColor='tertiary' href='https://ui.reach.tech/'>
+              Reach UI
+            </Link>
+          </ListItem>
+        </List>
+
+        <Notes>Reach UI - Componentes pensados exclusivamente em A11Y/UX (link)</Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
           Acessibilidade no Design
         </Heading>
       </Slide>
@@ -1157,7 +1160,14 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
         <Text fit textColor='secondary'>
           Um bom contraste de cores (ou a falta dele) influencia <br />
-          pessoas com baixa visão ou daltonismo
+          pessoas com{' '}
+          <S textColor='tertiary' type='bold'>
+            baixa visão
+          </S>{' '}
+          ou{' '}
+          <S textColor='tertiary' type='bold'>
+            daltonismo
+          </S>
         </Text>
       </Slide>
 
@@ -1253,18 +1263,18 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>Manter informações relacionadas perto umas das outras</Notes>
       </Slide>
 
-      <Slide contentStyles={{ height: '100%', padding: '40px 0' }}>
+      <Slide contentStyles={{ maxWidth: 1100, height: '100%', padding: '40px 0' }}>
         <Layout
           style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
         >
           <Fit>
-            <Heading size={1} fit caps>
-              Pensando em deficiências - Desabilidades cognitivas
+            <Heading size={1} fit caps textSize={36}>
+              Pensando em deficiências cognitivas - Spellcheck
             </Heading>
           </Fit>
 
           <Fit>
-            <video style={{ width: '100%', height: '100%' }} autoPlay loop>
+            <video style={{ width: '100%', height: 540 }} autoPlay loop>
               <source src='./videos/spell-checking.webm' type='video/webm' />
             </video>
           </Fit>

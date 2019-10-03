@@ -89,7 +89,7 @@ const SoftwareDevelopmentCycle = () => {
         </Heading>
       </Fit>
 
-      <Fit style={{ maxHeight: 610 }}>
+      <Fit style={{ maxHeight: 590 }}>
         <svg viewBox='0 0 1266 1265' xmlns='http://www.w3.org/2000/svg' className={styles.icon}>
           <g id='planning' className={planningClassName}>
             <path
