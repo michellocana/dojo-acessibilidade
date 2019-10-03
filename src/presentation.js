@@ -363,14 +363,14 @@ const Presentation = () => {
       </Slide>
 
       <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
-        <Layout style={{ height: '100%', flexDirection: 'column' }}>
+        <Layout style={{ height: '100%', flexDirection: 'column', padding: '40px 0', justifyContent: 'space-between' }}>
           <Fit>
             <Heading size={1} fit caps>
               Navegação com teclado funcionando por padrão
             </Heading>
           </Fit>
 
-          <Fill>
+          <Fill style={{ maxHeight: 540 }}>
             <video style={{ width: '100%', height: '100%' }} autoPlay loop>
               <source src='./videos/form-keyboard-navigation.mp4' type='video/mp4' />
             </video>
@@ -569,7 +569,7 @@ const Presentation = () => {
         <Notes>Ênfase no PSEUDO, por que o elemento literalmente não existe</Notes>
       </Slide>
 
-      <Slide>
+      <Slide >
         <Heading size={1} fit caps>
           Media query assistiva: prefers-reduced-motion
         </Heading>
@@ -611,7 +611,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Layout>
       </Slide>
 
-      <Slide>
+      <Slide contentStyles={{ maxWidth: 1100 }}>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
             <Heading size={1} fit caps style={{ paddingBottom: 5 }}>
@@ -821,8 +821,8 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         </Notes>
       </Slide>
 
-      <Slide>
-        <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
+      <Slide contentStyles={{ height: 680, padding: '20px 0' }}>
+        <Layout style={{ flex: 1, flexDirection: 'column', height: '100%', justifyContent: 'space-between' }}>
           <Fit>
             <Heading size={1} fit caps>
               Boas Práticas - Tamanho importa
@@ -833,13 +833,13 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             </Text>
           </Fit>
 
-          <Fill>
+          <Fit style={{ maxHeight: 520 }}>
             <Layout>
               <Fill>
                 <img
                   src='./images/tap-zone-wrong.svg'
                   alt='Área de toque errada.'
-                  style={{ margin: 20 }}
+                  style={{ margin: '0 20px' }}
                 />
               </Fill>
 
@@ -847,29 +847,29 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 <img
                   src='./images/tap-zone-correct.svg'
                   alt='Área de toque correta.'
-                  style={{ margin: 20 }}
+                  style={{ margin: '0 20px' }}
                 />
               </Fill>
             </Layout>
-          </Fill>
+          </Fit>
         </Layout>
 
         <Notes>O Chrome/Safari dão zoom quando uma área de toque muito pequena é tocada</Notes>
       </Slide>
 
-      <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
-        <Layout style={{ height: '100%', flexDirection: 'column' }}>
+      <Slide contentStyles={{ height: '100%', maxWidth: 980,  padding: '40px 0' }}>
+        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between', }}>
           <Fit>
             <Heading size={1} fit caps>
               Boas Práticas - Skip to content link
             </Heading>
           </Fit>
 
-          <Fill>
+          <Fit style={{maxHeight: 550}}>
             <video style={{ width: '100%', height: '100%' }} autoPlay loop>
               <source src='./videos/skip-to-content-link.webm' type='video/webm' />
             </video>
-          </Fill>
+          </Fit>
         </Layout>
       </Slide>
 
