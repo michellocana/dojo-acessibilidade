@@ -236,8 +236,8 @@ const ContextualImageAlt = props => {
               lineHeight={1.3}
               style={{ marginTop: 15 }}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos libero facilis numquam
-              asperiores necessitatibus fugit molestiae voluptate dolores.
+              Faltou criatividade pra continuar escrevendo então lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Asperiores, ipsam.
             </Text>
 
             <Text

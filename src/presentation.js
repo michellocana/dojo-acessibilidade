@@ -803,67 +803,6 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
       <Slide>
         <Heading size={1} fit caps>
-          Ferramentas (para devs)
-        </Heading>
-
-        <List>
-          <ListItem>
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR'
-            >
-              Lighthouse
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://www.deque.com/axe/axe-for-web/'
-            >
-              Axe
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://www.npmjs.com/package/eslint-plugin-jsx-a11y'
-            >
-              eslint-plugin-jsx-a11y
-            </Link>
-          </ListItem>
-          <ListItem>
-            Devtools do{' '}
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://developers.google.com/web/tools/chrome-devtools/accessibility/reference'
-            >
-              Chrome
-            </Link>
-            /
-            <Link
-              target='_blank'
-              textColor='tertiary'
-              href='https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector'
-            >
-              Firefox
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link target='_blank' textColor='tertiary' href='https://ui.reach.tech/'>
-              Reach UI
-            </Link>
-          </ListItem>
-        </List>
-
-        <Notes>Reach UI - Componentes pensados exclusivamente em A11Y/UX (link)</Notes>
-      </Slide>
-
-      <Slide>
-        <Heading size={1} fit caps>
           Boas Práticas - Não desabilite o zoom da página
         </Heading>
 
@@ -918,7 +857,6 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>O Chrome/Safari dão zoom quando uma área de toque muito pequena é tocada</Notes>
       </Slide>
 
-      {/* TODO botar pesquisa de to pimp a butterfly */}
       <Slide contentStyles={{ height: '100%', maxWidth: 980 }}>
         <Layout style={{ height: '100%', flexDirection: 'column' }}>
           <Fit>
@@ -1124,6 +1062,67 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
       <Slide>
         <Heading size={1} fit caps>
+          Ferramentas (para devs)
+        </Heading>
+
+        <List>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR'
+            >
+              Lighthouse
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://www.deque.com/axe/axe-for-web/'
+            >
+              Axe
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://www.npmjs.com/package/eslint-plugin-jsx-a11y'
+            >
+              eslint-plugin-jsx-a11y
+            </Link>
+          </ListItem>
+          <ListItem>
+            Devtools do{' '}
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://developers.google.com/web/tools/chrome-devtools/accessibility/reference'
+            >
+              Chrome
+            </Link>
+            /
+            <Link
+              target='_blank'
+              textColor='tertiary'
+              href='https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector'
+            >
+              Firefox
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link target='_blank' textColor='tertiary' href='https://ui.reach.tech/'>
+              Reach UI
+            </Link>
+          </ListItem>
+        </List>
+
+        <Notes>Reach UI - Componentes pensados exclusivamente em A11Y/UX (link)</Notes>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit caps>
           Acessibilidade no Design
         </Heading>
       </Slide>
@@ -1264,21 +1263,18 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         <Notes>Manter informações relacionadas perto umas das outras</Notes>
       </Slide>
 
-      {/* TODO ajustar esse slide */}
       <Slide contentStyles={{ maxWidth: 1100, height: '100%', padding: '40px 0' }}>
         <Layout
           style={{ height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}
         >
           <Fit>
             <Heading size={1} fit caps textSize={36}>
-              Pensando em deficiências
-              <br />
-              Deficiências cognitivas - Spellcheck
+              Pensando em deficiências cognitivas - Spellcheck
             </Heading>
           </Fit>
 
           <Fit>
-            <video style={{ width: '100%', height: 520 }} autoPlay loop>
+            <video style={{ width: '100%', height: 540 }} autoPlay loop>
               <source src='./videos/spell-checking.webm' type='video/webm' />
             </video>
           </Fit>
