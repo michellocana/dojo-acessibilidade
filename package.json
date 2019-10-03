@@ -13,8 +13,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "rm -rf static",
     "build": "react-scripts build",
-    "postbuild": "cp -R build/* . && rm -rf static build precache-manifest.*",
+    "postbuild": "cp -R build/* . && rm -rf build precache-manifest.*",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
