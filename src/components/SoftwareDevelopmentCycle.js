@@ -28,12 +28,11 @@ const SoftwareDevelopmentCycle = () => {
   return (
     <Layout
       style={{
-        height: 680,
         flexDirection: 'column',
-        justifyContent: 'space-between'
+        justifyContent: 'center'
       }}
     >
-      <Fit>
+      <Fit style={{ paddingBottom: 20 }}>
         <Anim
           easing='linear'
           fromStyle={{ opacity: 0 }}
@@ -89,7 +88,7 @@ const SoftwareDevelopmentCycle = () => {
         </Heading>
       </Fit>
 
-      <Fit style={{ maxHeight: 590 }}>
+      <Fit style={{ maxHeight: '81vh' }}>
         <svg viewBox='0 0 1266 1265' xmlns='http://www.w3.org/2000/svg' className={styles.icon}>
           <g id='planning' className={planningClassName}>
             <path

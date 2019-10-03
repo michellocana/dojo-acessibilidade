@@ -17,7 +17,7 @@ const ExcessiveAltExample = props => {
 
   return (
     <>
-      <Layout style={{ flexDirection: 'column' }}>
+      <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
         <Fit>
           <Heading size={1} fit caps textColor='tertiary'>
             Em busca do alt perfeito
@@ -29,12 +29,13 @@ const ExcessiveAltExample = props => {
         </Fit>
 
         <Fill>
-          <div style={{ position: 'relative', display: 'flex' }}>
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
             <img
-              src='./images/alt-description-example.jpg'
               alt=''
-              style={{ width: '100%', objectFit: 'cover' }}
+              src='./images/alt-description-example.jpg'
+              style={{ width: '100%', maxHeight: '70vh', objectFit: 'cover' }}
             />
+
             <Appear>
               <div>
                 <motion.div
