@@ -136,15 +136,15 @@ const Presentation = () => {
 
         <Layout style={{ marginTop: 20 }}>
           <Appear>
-            <Image style={{ maxWidth: '33%'}} margin={5} src='./images/braille-reader.jpg' />
+            <Image style={{ maxWidth: '33%' }} margin={5} src='./images/braille-reader.jpg' />
           </Appear>
 
           <Appear>
-            <Image style={{ maxWidth: '33%'}} margin={5} src='./images/eye-tracker.png' />
+            <Image style={{ maxWidth: '33%' }} margin={5} src='./images/eye-tracker.png' />
           </Appear>
 
           <Appear>
-            <Image style={{ maxWidth: '33%'}} margin={5} src='./images/switch-access.jpg' />
+            <Image style={{ maxWidth: '33%' }} margin={5} src='./images/switch-access.jpg' />
           </Appear>
         </Layout>
 
@@ -391,7 +391,7 @@ const Presentation = () => {
         </Heading>
 
         <Heading size={1} fit caps textColor='secondary'>
-          Web Accessibility Intiative - Accessible Rich Internet Applications
+          Web Accessibility Initiative - Accessible Rich Internet Applications
         </Heading>
 
         <Notes>
@@ -569,7 +569,7 @@ const Presentation = () => {
         <Appear>
           <Text textColor='secondary' textSize={24} style={{ paddingTop: 20 }}>
             Inclusive, a palavra "pseudo" em azul nesse slide é setada via content, tente selecionar
-            ou copiar o texto dela ela
+            ou copiar o texto dela
           </Text>
         </Appear>
 
@@ -676,7 +676,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
       <Slide>
         <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
-          Outras media-queries assistivas
+          Outras media queries assistivas
         </Heading>
 
         <List>
