@@ -34,7 +34,8 @@ const HolyGrailLayout = props => {
 
   return (
     <div className={styles.container}>
-      {props.children}
+      <Image style={{ margin: 0 }} height='90vh' src='./images/terra.jpg' />
+
       <Appear>
         <div className={styles.grid}>
           <header className={headerClassName}>
