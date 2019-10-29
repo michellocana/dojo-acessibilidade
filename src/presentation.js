@@ -233,7 +233,7 @@ const Presentation = () => {
         <Appear>
           <BlockQuote style={{ marginTop: 80 }}>
             <Quote textSize={50} textColor='secondary' style={{ borderColor: 'white' }}>
-              Acessibilidade é mais uma coisa pra mim me preocupar como dev
+              Acessibilidade é mais uma coisa pra mim me preocupar como desenvolvedor
             </Quote>
             <Cite margin={20}>Alguém que precisa assistir esse dojo</Cite>
           </BlockQuote>
