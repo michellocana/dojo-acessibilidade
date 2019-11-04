@@ -41,6 +41,7 @@ import Conclusion from './slides/Conclusion'
 import References from './slides/References'
 // import KeyboardNavigationWorkingByDefault from './slides/KeyboardNavigationWorkingByDefault'
 import KeyboardNavigation from './slides/KeyboardNavigation'
+import AcessibilityHighlights from './slides/AcessibilityHighlights'
 
 const theme = createTheme(
   {
@@ -102,6 +103,7 @@ const Presentation = () => {
       {UsePlaceholdersCorrectly()}
       {UseParallaxCorrectly()}
       {ComponentWithAccessibilityIssues()}
+      {AcessibilityHighlights()}
       {ToolsForDesigners()}
       {Conclusion()}
       {References()}
