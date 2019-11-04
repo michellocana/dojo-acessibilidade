@@ -5,13 +5,10 @@ import createTheme from 'spectacle/lib/themes/default'
 
 import 'normalize.css'
 
-import AboutTheDojoApproach from './slides/AboutTheDojoApproach'
 import Intro from './slides/Intro'
 import Principles from './slides/Principles'
 import Publics from './slides/Publics'
 import MinorityUserMyth from './slides/MinorityUserMyth'
-import SemanticHtml from './slides/SemanticHtml'
-import KeyboardNavigation from './slides/KeyboardNavigation'
 import WaiAria from './slides/WaiAria'
 import CssHints from './slides/CssHints'
 import AltTextGoodPractices from './slides/AltTextGoodPractices'
@@ -42,6 +39,8 @@ import ComponentWithAccessibilityIssues from './slides/ComponentWithAccessibilit
 import ToolsForDesigners from './slides/ToolsForDesigners'
 import Conclusion from './slides/Conclusion'
 import References from './slides/References'
+// import KeyboardNavigationWorkingByDefault from './slides/KeyboardNavigationWorkingByDefault'
+import KeyboardNavigation from './slides/KeyboardNavigation'
 
 const theme = createTheme(
   {
@@ -66,13 +65,14 @@ const Presentation = () => {
       showFullscreenControl={false}
       progress='bar'
     >
+      {/* CHECKPOINT - INTRO */}
       {Intro()}
-      {AboutTheDojoApproach()}
-      {Principles()}
-      {Publics()}
+      {/* {AboutTheDojoApproach()} */}
       {MinorityUserMyth()}
-      {SemanticHtml()}
-      {KeyboardNavigation()}
+      {Publics()}
+      {Principles()}
+      {/* CHECKPOINT - DEV */}
+      {/* {SemanticHtml()} */}
       {WaiAria()}
       {CssHints()}
       {AltTextGoodPractices()}
@@ -86,6 +86,8 @@ const Presentation = () => {
       {TestInRealTools()}
       {TestEverything()}
       {ToolsForDevs()}
+      {/* CHECKPOINT - DESIGN */}
+      {KeyboardNavigation()}
       {AccessibilityInDesign()}
       {FontSize()}
       {ContrastColor()}
