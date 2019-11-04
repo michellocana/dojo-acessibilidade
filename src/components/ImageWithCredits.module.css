@@ -1,0 +1,32 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 10px);
+  padding: 40px 20px;
+  display: grid;
+  grid-template-rows: 1fr max-content;
+}
+
+.imageWrapper {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.image {
+  flex: 1;
+  height: auto;
+  width: auto;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto !important;
+}
+
+.link {
+  text-decoration: underline !important;
+}

@@ -2,17 +2,11 @@ import React from 'react'
 import { Slide, Heading, Notes, S } from 'spectacle'
 
 import FullImage from '../components/FullImage'
+import TextHighlight from '../components/TextHighlight'
+import ImageWithCredits from '../components/ImageWithCredits'
 
 function KeyboardNavigation() {
   return [
-    <Slide>
-      <Heading size={1} fit caps>
-        Garanta uma boa
-        <br />
-        navegação por teclado
-      </Heading>
-    </Slide>,
-
     <Slide>
       <Heading size={1} fit caps>
         Garanta que todo conteúdo <br />
@@ -20,15 +14,9 @@ function KeyboardNavigation() {
       </Heading>
 
       <Notes>
-        Ajuda não só pessoas com{' '}
-        <S type='bold' textColor='tertiary' caps>
-          deficiências motoras
-        </S>
-        , mas também{' '}
-        <S type='bold' textColor='tertiary' caps>
-          powerusers
-        </S>{' '}
-        que tem costume de navegar com o teclado, o que é bem comum
+        Ajuda não só pessoas com <TextHighlight>deficiências motoras</TextHighlight>, mas também{' '}
+        <TextHighlight>powerusers</TextHighlight> que tem costume de navegar com o teclado, o que é
+        bem comum
       </Notes>
     </Slide>,
 
@@ -45,19 +33,41 @@ function KeyboardNavigation() {
 
       <Notes>
         A home do medium não tem como focar com o teclado nessas informações à direita por que tem{' '}
-        <S type='bold' textColor='tertiary' caps>
-          scroll infinito
-        </S>
+        <TextHighlight>scroll infinito</TextHighlight>
       </Notes>
     </Slide>,
 
     <Slide>
       <Heading size={1} fit caps>
-        Foco no estilo de foco
+        Não esqueça do estilo de foco
       </Heading>
-      {/* TODO melhorar esse slide */}
+
       <Notes>
-        Certifique-se que seja fácil de perceber quando qualquer elemento na tela está sendo focado
+        Certifique-se que seja <TextHighlight>fácil de perceber</TextHighlight> quando qualquer
+        elemento na tela está sendo focado
+      </Notes>
+    </Slide>,
+
+    <Slide>
+      <ImageWithCredits
+        author='Zell'
+        credits='Designing a focus style'
+        src='./images/twitter-focus-management.gif'
+        creditsLink='https://zellwk.com/blog/design-focus-style/'
+      />
+    </Slide>,
+
+    <Slide>
+      <ImageWithCredits
+        author='Zell'
+        credits='Designing a focus style'
+        src='./images/bad-focus-style.gif'
+        creditsLink='https://zellwk.com/blog/design-focus-style/'
+      />
+      <Notes>
+        Um usuário daltônico pode (e vai) ter dificuldade de{' '}
+        <TextHighlight>ver que o texto está com foco</TextHighlight> caso ele esteja navegando pelo
+        teclado
       </Notes>
     </Slide>
   ]
