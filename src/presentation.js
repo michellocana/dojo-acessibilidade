@@ -9,7 +9,7 @@ import Intro from './slides/Intro'
 import Principles from './slides/Principles'
 import Publics from './slides/Publics'
 import MinorityUserMyth from './slides/MinorityUserMyth'
-import WaiAria from './slides/WaiAria'
+// import WaiAria from './slides/WaiAria'
 import CssHints from './slides/CssHints'
 import AltTextGoodPractices from './slides/AltTextGoodPractices'
 import DontDisableZoom from './slides/DontDisableZoom'
@@ -42,6 +42,7 @@ import References from './slides/References'
 // import KeyboardNavigationWorkingByDefault from './slides/KeyboardNavigationWorkingByDefault'
 import KeyboardNavigation from './slides/KeyboardNavigation'
 import AcessibilityHighlights from './slides/AcessibilityHighlights'
+import ConsiderUserPreference from './components/ConsiderUserPreference'
 
 const theme = createTheme(
   {
@@ -76,6 +77,7 @@ const Presentation = () => {
       {/* {SemanticHtml()} */}
       {/* {WaiAria()} */}
       {CssHints()}
+      {ConsiderUserPreference()}
       {AltTextGoodPractices()}
       {DontDisableZoom()}
       {SizeYourTouchAreas()}

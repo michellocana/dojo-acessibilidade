@@ -1,5 +1,5 @@
 import React from 'react'
-import { Slide, Image, Heading, Notes, Text, Layout, Fit, Fill } from 'spectacle'
+import { Slide, Image, Heading, Notes, List, ListItem } from 'spectacle'
 import FullVideo from './FullVideo'
 import TextHighlight from './TextHighlight'
 
@@ -76,7 +76,24 @@ function ConsiderUserPreference() {
 
     <Slide contentStyles={{ maxWidth: 1100 }}>
       <FullVideo src='./videos/prefers-reduced-motion.mp4' objectFit='contain' />
+    </Slide>,
+
+    // <DisablingAllTransitions />,
+
+    <Slide>
+      <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
+        Casos de uso (prefers-reduced-motion)
+      </Heading>
+
+      <List>
+        <ListItem>Desativar transições/animações do site</ListItem>
+        <ListItem>Desativar smooth scroll</ListItem>
+        <ListItem>Trocar um vídeo por uma imagem estática</ListItem>
+        <ListItem>Desativar efeitos de parallax</ListItem>
+      </List>
     </Slide>
+
+    // <OtherAssistiveMediaQueries />
   ]
 }
 
