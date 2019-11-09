@@ -74,7 +74,7 @@ const Presentation = () => {
       {Principles()}
       {/* CHECKPOINT - DEV */}
       {/* {SemanticHtml()} */}
-      {WaiAria()}
+      {/* {WaiAria()} */}
       {CssHints()}
       {AltTextGoodPractices()}
       {DontDisableZoom()}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Slide, Heading, Notes, S } from 'spectacle'
+import { Slide, Heading, Notes } from 'spectacle'
 
 import FullImage from '../components/FullImage'
 import TextHighlight from '../components/TextHighlight'
