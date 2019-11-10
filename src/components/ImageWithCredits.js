@@ -1,7 +1,9 @@
 import React from 'react'
-import { Image, Link } from 'spectacle'
+import { Image } from 'spectacle'
 
 import styles from './ImageWithCredits.module.css'
+
+import Link from './Link'
 
 function ImageWithCredits({ src, credits, creditsLink, author }) {
   return (

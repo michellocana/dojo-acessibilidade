@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
-import { Slide, Heading, Notes, Layout, Text, Link, Fill } from 'spectacle'
+import { Slide, Heading, Notes, Layout, Text, Fill } from 'spectacle'
+
+import Link from '../components/Link'
 
 function SelfExplainableLinkTexts() {
   return (

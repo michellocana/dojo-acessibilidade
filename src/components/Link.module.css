@@ -1,0 +1,9 @@
+.externalLink:after {
+  content: '';
+  display: inline-block;
+  background-image: url('/images/external-link.svg');
+  width: 0.8em;
+  height: 0.8em;
+  vertical-align: baseline;
+  margin-left: 0.25em;
+}

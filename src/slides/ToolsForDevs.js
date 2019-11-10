@@ -1,5 +1,7 @@
 import React from 'react'
-import { Slide, Heading, Notes, List, ListItem, Link } from 'spectacle'
+import { Slide, Heading, Notes, List, ListItem } from 'spectacle'
+
+import Link from '../components/Link'
 
 function ToolsForDevs() {
   return (
