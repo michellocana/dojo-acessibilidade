@@ -39,14 +39,14 @@ function AltTextGoodPractices() {
           alt='Pessoa em cima de uma formação rochosa.'
         />
       </Appear>
+
+      <Notes>O alt serve também pra quando a imagem não carrega por algum motivo</Notes>
     </Slide>,
 
     <Slide>
       <Heading size={1} fit caps>
         Como escrever um alt acessível?
       </Heading>
-
-      <Notes>O alt serve também pra quando a imagem não carrega por algum motivo</Notes>
     </Slide>,
 
     <Slide>

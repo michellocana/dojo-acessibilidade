@@ -36,13 +36,14 @@ import SelfExplainableLinkTexts from './slides/SelfExplainableLinkTexts'
 import UsePlaceholdersCorrectly from './slides/UsePlaceholdersCorrectly'
 import UseParallaxCorrectly from './slides/UseParallaxCorrectly'
 import ComponentWithAccessibilityIssues from './slides/ComponentWithAccessibilityIssues'
-import ToolsForDesigners from './slides/ToolsForDesigners'
+// import ToolsForDesigners from './slides/ToolsForDesigners'
 import Conclusion from './slides/Conclusion'
 import References from './slides/References'
 // import KeyboardNavigationWorkingByDefault from './slides/KeyboardNavigationWorkingByDefault'
 import KeyboardNavigation from './slides/KeyboardNavigation'
 import AcessibilityHighlights from './slides/AcessibilityHighlights'
 import ConsiderUserPreference from './components/ConsiderUserPreference'
+import ToolsForEveryone from './slides/ToolsForEveryone'
 
 const theme = createTheme(
   {
@@ -106,7 +107,8 @@ const Presentation = () => {
       {UseParallaxCorrectly()}
       {ComponentWithAccessibilityIssues()}
       {AcessibilityHighlights()}
-      {ToolsForDesigners()}
+      {/* {ToolsForDesigners()} */}
+      {ToolsForEveryone()}
       {Conclusion()}
       {References()}
     </Deck>

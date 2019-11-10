@@ -1,5 +1,5 @@
 import React from 'react'
-import { Slide, Heading, Text, Notes, Layout, Fit, Fill } from 'spectacle'
+import { Slide, Heading, Notes, Layout, Fit, Fill } from 'spectacle'
 
 function SizeYourTouchAreas() {
   return (
