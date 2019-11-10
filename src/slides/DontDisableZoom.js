@@ -17,7 +17,7 @@ function DontDisableZoom() {
           width={ICON_WIDTH}
           style={{
             display: 'inline-block',
-            verticalAlign: 'middle',
+            verticalAlign: -3,
             marginRight: 10
           }}
         />
@@ -78,7 +78,8 @@ function DontDisableZoom() {
       {renderLessText('Limita a quantidade de conteúdo na tela')}
 
       <Notes>
-        Essa é uma <TextHighlight>estratégia inclusiva</TextHighlight>, mas talvez inclusiva de mais
+        Essa é uma <TextHighlight>estratégia inclusiva</TextHighlight>, mas talvez atrapalhe quem
+        não tenha esse tipo de necessidade
       </Notes>
     </Slide>,
 
@@ -89,7 +90,9 @@ function DontDisableZoom() {
 
       {renderLessText('Aceitar que meu site não é inclusivo')}
 
-      <Notes>Estratégia cômoda e exclusiva</Notes>
+      <Notes>
+        Estratégia <TextHighlight>cômoda</TextHighlight> e <TextHighlight>exclusiva</TextHighlight>
+      </Notes>
     </Slide>,
 
     <Slide>
@@ -97,10 +100,12 @@ function DontDisableZoom() {
         Não desabilitar o zoom
       </Heading>
 
-      {renderPlusText('Liberdade pro usuário')}
+      {renderPlusText('Liberdade para o usuário')}
       {renderLessText('Ao custo de alguns gestos de pinch')}
 
-      <Notes>Estratégia inclusiva</Notes>
+      <Notes>
+        Estratégia <TextHighlight>inclusiva</TextHighlight>
+      </Notes>
     </Slide>
   ]
 }

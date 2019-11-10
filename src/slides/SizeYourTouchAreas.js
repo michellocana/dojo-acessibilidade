@@ -14,12 +14,8 @@ function SizeYourTouchAreas() {
       >
         <Fit style={{ paddingBottom: 20 }}>
           <Heading size={1} fit caps>
-            Boas Práticas - Tamanho importa
+            Dimensione corretamente as áreas de toque
           </Heading>
-
-          <Text textColor='secondary' textSize={24}>
-            Dimensione corretamente as áreas de toque do site
-          </Text>
         </Fit>
 
         <Fit
