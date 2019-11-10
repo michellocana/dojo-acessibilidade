@@ -95,7 +95,9 @@ function AltTextGoodPractices() {
 
     <Slide>
       <Heading size={1} fit caps>
-        Forneça alternativa à conteúdos de texto
+        Forneça alternativa à
+        <br />
+        conteúdos de texto
       </Heading>
 
       <Text textColor='secondary' style={{ paddingTop: 20 }}>
@@ -109,6 +111,8 @@ function AltTextGoodPractices() {
           dislexia
         </S>
       </Text>
+
+      <Notes>Claro</Notes>
     </Slide>
   ]
 }
