@@ -5,12 +5,29 @@ import styles from './ImageWithCredits.module.css'
 
 import Link from './Link'
 
-function ImageWithCredits({ src, credits, creditsLink, author }) {
+function ImageWithCredits({
+  src,
+  credits,
+  creditsLink,
+  author,
+  extraText,
+  isVideo = false,
+  videoType = 'video/mp4'
+}) {
+  function renderContent() {
+    if (isVideo) {
+      return (
+        <video className={styles.image} autoPlay loop>
+          <source src={src} type={videoType} />
+        </video>
+      )
+    }
+
+    return <Image src={src} className={styles.image} />
+  }
   return (
     <div className={styles.container}>
-      <div className={styles.imageWrapper}>
-        <Image src={src} className={styles.image} />
-      </div>
+      <div className={styles.imageWrapper}>{renderContent()}</div>
 
       <Link
         target='_blank'
@@ -19,7 +36,7 @@ function ImageWithCredits({ src, credits, creditsLink, author }) {
         rel='noreferrer noopener'
         textColor='tertiary'
       >
-        {`${credits} (${author})`}
+        {`${credits} (${author || extraText})`}
       </Link>
     </div>
   )

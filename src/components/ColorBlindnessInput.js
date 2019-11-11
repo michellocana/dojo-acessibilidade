@@ -69,7 +69,7 @@ const ColorBlindnessInput = ({
         E-mail
       </label>
 
-      <input type='text' id={id} name={id} value='foo' className={inputClassName} />
+      <input type='text' id={id} name={id} value='joão da silva' className={inputClassName} />
 
       <div className={styles.errorWrapper}>
         <AnimatePresence>

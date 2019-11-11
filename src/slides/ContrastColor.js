@@ -1,80 +1,109 @@
 import React from 'react'
-import { Slide, Heading, Notes, List, ListItem, Layout, Fit, Text, S, Appear } from 'spectacle'
+import { Slide, Heading, Notes, Layout, Fit, Text, S, Fill } from 'spectacle'
+
+import TextHighlight from '../components/TextHighlight'
+import ImageWithCredits from '../components/ImageWithCredits'
+import RandomColorContrasts from '../components/RandomColorContrasts'
 
 function ContrastColor() {
-  return (
-    [
-      <Slide>
-        <Heading size={1} fit caps>
-          Contraste de cores
-        </Heading>
+  return [
+    <Slide>
+      <Heading size={1} fit caps>
+        Contraste de cores
+      </Heading>
 
-        <Text fit textColor='secondary'>
-          Um bom contraste de cores (ou a falta dele) influencia <br />
-          pessoas com{' '}
-          <S textColor='tertiary' type='bold'>
-            baixa visão
-          </S>{' '}
-          ou{' '}
-          <S textColor='tertiary' type='bold'>
-            daltonismo
-          </S>
-        </Text>
-      </Slide>,
+      <Text fit textColor='secondary'>
+        Um bom contraste de cores (ou a falta dele) influencia <br />
+        pessoas com{' '}
+        <S textColor='tertiary' type='bold'>
+          baixa visão
+        </S>{' '}
+        ou{' '}
+        <S textColor='tertiary' type='bold'>
+          daltonismo
+        </S>
+      </Text>
+    </Slide>,
 
-      <Slide>
-        <Heading size={1} fit caps>
-          O que define o nível de contraste entre 2 cores?
-        </Heading>
+    <Slide>
+      <Layout style={{ flexDirection: 'column' }}>
+        <Fit>
+          <Heading size={1} fit caps>
+            O que define o nível de
+            <br />
+            contraste entre 2 cores?
+          </Heading>
+        </Fit>
 
-        <Notes>É a diferença do nível de luminosidade entre 2 cores</Notes>
-      </Slide>,
+        <Fill>
+          <RandomColorContrasts />
+        </Fill>
+      </Layout>
 
-      <Slide>
-        <Heading size={1} fit caps>
-          E como eu descubro isso?
-        </Heading>
-      </Slide>,
+      <Notes>
+        Um <TextHighlight>cálculo</TextHighlight> comparando o{' '}
+        <TextHighlight>nível de luminosidade</TextHighlight> entre 2 cores
+        <br />
+        <br />
+        Esse nível vai de <TextHighlight>1 até 21</TextHighlight>
+        <br />
+        <br />
+        Falar sobre como o <TextHighlight>olho humano</TextHighlight> pode enganar
+      </Notes>
+    </Slide>,
 
-      <Slide>
-        <Text textColor='secondary' style={{ paddingBottom: 20 }}>
-          (L1 + 0.05) / (L2 + 0.05)
-        </Text>
+    // <Slide>
+    //   <Heading size={1} fit caps>
+    //     E como eu descubro isso?
+    //   </Heading>
+    // </Slide>,
 
-        <Appear>
-          <img src='./images/relative-luminance-formula.png' alt='' style={{ maxHeight: '75vh' }} />
-        </Appear>
-      </Slide>,
+    // <Slide>
+    //   <Text textColor='secondary' style={{ paddingBottom: 20 }}>
+    //     (L1 + 0.05) / (L2 + 0.05)
+    //   </Text>
 
-      <Slide contentStyles={{ height: '100%', padding: '30px 0' }}>
-        <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
-          <Fit style={{ paddingBottom: 20 }}>
-            <Heading size={1} fit caps>
-              Ou pode usar um contrast checker
-            </Heading>
-          </Fit>
+    //   <Appear>
+    //     <img src='./images/relative-luminance-formula.png' alt='' style={{ maxHeight: '75vh' }} />
+    //   </Appear>
+    // </Slide>,
 
-          <Fit>
-            <video style={{ width: '100%', height: '82vh', maxHeight: 570 }} autoPlay loop>
-              <source src='./videos/contrast-checker.webm' type='video/webm' />
-            </video>
-          </Fit>
-        </Layout>
+    <Slide contentStyles={{ height: '100%', padding: '30px 0' }}>
+      <ImageWithCredits
+        isVideo
+        src='./videos/contrast-checker.webm'
+        videoType='video/webm'
+        author='WebAIM'
+        credits='Contrast Checker'
+        creditsLink='https://webaim.org/resources/contrastchecker/'
+      />
 
-        <Notes>
-          <List>
-            <ListItem>O valor vai de 1 até 21</ListItem>
+      <Notes>
+        Categorias: <TextHighlight>AA</TextHighlight> e <TextHighlight>AAA</TextHighlight>
+        <br />
+        <br />O valor pode <TextHighlight>variar</TextHighlight> de acordo com o{' '}
+        <TextHighlight>tamanho do texto</TextHighlight>
+        <br />
+        <br />
+        Dica para testar o contraste: se estiver no celular, tente{' '}
+        <TextHighlight>baixar o brilho da tela</TextHighlight>
+      </Notes>
+    </Slide>,
 
-            <ListItem>O valor pode variar de acordo com o tamanho do texto</ListItem>
+    <Slide>
+      <ImageWithCredits
+        credits='Stark'
+        src='./images/stark.png'
+        creditsLink='https://getstark.co/'
+        extraText='plugin para Figma / Adobe XD / Sketch'
+      />
 
-            <ListItem>
-              Dica para testar o contraste: se estiver no celular, tente baixar o brilho da tela
-            </ListItem>
-          </List>
-        </Notes>
-      </Slide>,
-    ]
-  )
+      <Notes>
+        Para quem usa Figma, tem o plugin <TextHighlight>Stark</TextHighlight>, que faz esses
+        cálculos direto no app
+      </Notes>
+    </Slide>
+  ]
 }
 
 export default ContrastColor

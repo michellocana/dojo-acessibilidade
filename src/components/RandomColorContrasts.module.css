@@ -1,0 +1,36 @@
+.container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.box {
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.textWrapper {
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  margin: 0;
+}
+
+.ratio {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ratioIcon {
+  margin-left: 10px;
+}
