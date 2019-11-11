@@ -1,5 +1,7 @@
 import React from 'react'
-import { Slide, Heading, Notes, Layout, Fit } from 'spectacle'
+import { Slide, Heading, Notes, Layout, Fit, Image } from 'spectacle'
+
+import TextHighlight from '../components/TextHighlight'
 
 function Spellcheck() {
   return (
@@ -11,16 +13,15 @@ function Spellcheck() {
           </Heading>
         </Fit>
 
-        <Fit>
-          <video style={{ width: '100%', height: '72vh', maxHeight: 540 }} autoPlay loop>
-            <source src='./videos/spell-checking.webm' type='video/webm' />
-          </video>
+        <Fit style={{ maxHeight: 560 }}>
+          <Image src='./images/spellcheck.png' style={{ marginTop: 0, marginBottom: 0 }} />
         </Fit>
       </Layout>
 
       <Notes>
-        Sim... na maioria das vezes é difícil de implementar, mas pode ajudar pessoas com dislexia
-        ou baixa escolaridade
+        Na maioria das vezes é <TextHighlight>difícil de implementar</TextHighlight>, mas pode
+        ajudar pessoas com <TextHighlight>dislexia</TextHighlight> ou{' '}
+        <TextHighlight>baixa escolaridade</TextHighlight>
       </Notes>
     </Slide>
   )
