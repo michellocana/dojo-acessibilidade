@@ -103,8 +103,8 @@ const Presentation = () => {
       {AvoidOrtographicalErrors()}
       {GaiaProject()}
       {SelfExplainableLinkTexts()}
-      {UsePlaceholdersCorrectly()}
-      {UseParallaxCorrectly()}
+      {/* {UsePlaceholdersCorrectly()} */}
+      {/* {UseParallaxCorrectly()} */}
       {ComponentWithAccessibilityIssues()}
       {AcessibilityHighlights()}
       {/* {ToolsForDesigners()} */}

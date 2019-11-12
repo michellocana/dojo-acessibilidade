@@ -38,15 +38,19 @@ function ConsiderUserPreference() {
       </Heading>
 
       <Notes>
-        Várias pessoas estavam tendo <TextHighlight>tonturas e vertigens</TextHighlight> ao usar o
-        sistema.
+        Pessoas estavam tendo <TextHighlight>tonturas/vertigens</TextHighlight> ao usar o sistema.
         <br />
         <br />
-        Esses usuários apresentavam distúrbios no <TextHighlight>sistema vestibular</TextHighlight>.
+        Usuários tinham distúrbios no <TextHighlight>sistema vestibular</TextHighlight>
+        .
         <br />
         <br />
         Parte interna do <TextHighlight>ouvido</TextHighlight> que controla o{' '}
-        <TextHighlight>equilíbrio</TextHighlight>
+        <TextHighlight>equilíbrio</TextHighlight>.
+        <br />
+        <br />
+        <TextHighlight>35%</TextHighlight> dos adultos acima de{' '}
+        <TextHighlight>40 anos</TextHighlight> possuem essa disfunção
       </Notes>
     </Slide>,
 
