@@ -1,5 +1,7 @@
 import React from 'react'
-import { Slide, Heading, Layout, Fit } from 'spectacle'
+import { Slide, Heading, Layout, Fit, Notes } from 'spectacle'
+
+import TextHighlight from '../components/TextHighlight'
 
 function SkipToContentLink() {
   return (
@@ -7,7 +9,7 @@ function SkipToContentLink() {
       <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
         <Fit style={{ paddingBottom: 20 }}>
           <Heading size={1} fit caps>
-            Boas Práticas - Skip to content link
+            Botão para ir ao conteúdo principal
           </Heading>
         </Fit>
 
@@ -17,6 +19,11 @@ function SkipToContentLink() {
           </video>
         </Fit>
       </Layout>
+
+      <Notes>
+        Auxilia na <TextHighlight>navegação com teclado</TextHighlight> para páginas com{' '}
+        <TextHighlight>muitos links</TextHighlight> no header
+      </Notes>
     </Slide>
   )
 }

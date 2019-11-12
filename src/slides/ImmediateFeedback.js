@@ -9,7 +9,7 @@ function ImmediateFeedback() {
       <Layout style={{ height: '100%', flexDirection: 'column' }}>
         <Fit>
           <Heading size={1} fit caps>
-            Boas Práticas - Dê feedback instantâneo ao usuário
+            Dê feedback instantâneo ao usuário
           </Heading>
         </Fit>
 

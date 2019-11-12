@@ -89,7 +89,7 @@ const Presentation = () => {
       {KnowYourAudience()}
       {TestInRealTools()}
       {TestEverything()}
-      {ToolsForDevs()}
+      {/* {ToolsForDevs()} */}
       {/* CHECKPOINT - DESIGN */}
       {KeyboardNavigation()}
       {AccessibilityInDesign()}
