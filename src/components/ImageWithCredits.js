@@ -12,18 +12,19 @@ function ImageWithCredits({
   author,
   extraText,
   isVideo = false,
-  videoType = 'video/mp4'
+  videoType = 'video/mp4',
+  style = {}
 }) {
   function renderContent() {
     if (isVideo) {
       return (
-        <video className={styles.image} autoPlay loop>
+        <video className={styles.image} autoPlay loop style={style}>
           <source src={src} type={videoType} />
         </video>
       )
     }
 
-    return <Image src={src} className={styles.image} />
+    return <Image src={src} className={styles.image} style={style} />
   }
   return (
     <div className={styles.container}>
