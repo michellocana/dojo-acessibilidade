@@ -1,5 +1,6 @@
 import React from 'react'
 import { Slide, Heading, Notes } from 'spectacle'
+import TextHighlight from '../components/TextHighlight'
 
 function GaiaProject() {
   return (
@@ -15,8 +16,9 @@ function GaiaProject() {
       />
 
       <Notes>
-        Trabalho de mestrado da Talita Pagani, para guiar as pessoas a construir interfaces
-        amigáveis para usuários com autismo
+        Trabalho de mestrado da Talita Pagani, para guiar as pessoas a construir{' '}
+        <TextHighlight>interfaces amigáveis</TextHighlight> para{' '}
+        <TextHighlight>usuários com autismo</TextHighlight>
       </Notes>
     </Slide>
   )

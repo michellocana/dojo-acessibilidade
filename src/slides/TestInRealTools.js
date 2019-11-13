@@ -59,12 +59,8 @@ function TestInRealTools() {
 
     <Slide>
       <Heading size={1} fit caps>
-        Teste em ferramentas reais
+        Screen readers mais usados
       </Heading>
-
-      <Text textColor='secondary' textAlign='left' style={{ paddingTop: 30 }}>
-        Screen readers mais usados:
-      </Text>
 
       <List>
         <ListItem>JAWS e NVDA (Windows)</ListItem>

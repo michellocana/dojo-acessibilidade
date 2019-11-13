@@ -85,13 +85,10 @@ const Presentation = () => (
     {SmoothScroll()}
     {ImmediateFeedback()}
     {PredeterminatedActionTime()}
-    {KnowYourAudience()}
-    {TestInRealTools()}
-    {TestEverything()}
     {/* {ToolsForDevs()} */}
     {/* CHECKPOINT - DESIGN */}
     {KeyboardNavigation()}
-    {AccessibilityInDesign()}
+    {/* {AccessibilityInDesign()} */}
     {FontSize()}
     {ContrastColor()}
     {ColorBlindness()}
@@ -105,6 +102,9 @@ const Presentation = () => (
     {/* {UsePlaceholdersCorrectly()} */}
     {/* {UseParallaxCorrectly()} */}
     {ComponentWithAccessibilityIssues()}
+    {KnowYourAudience()}
+    {TestInRealTools()}
+    {TestEverything()}
     {/* {AcessibilityHighlights()} */}
     {/* {ToolsForDesigners()} */}
     {ToolsForEveryone()}

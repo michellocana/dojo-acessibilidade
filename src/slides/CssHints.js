@@ -2,6 +2,7 @@ import React from 'react'
 import { Slide, Heading, Notes } from 'spectacle'
 
 import OutlineExample from '../components/OutlineExample'
+import TextHighlight from '../components/TextHighlight'
 // import OtherAssistiveMediaQueries from '../components/OtherAssistiveMediaQueries'
 // import ContentText from '../components/ContentText'
 // import ContentForVisualsOnly from '../components/ContentForVisualsOnly'
@@ -25,8 +26,7 @@ function CssHints() {
       <OutlineExample />
 
       <Notes>
-        É comum a prática de remover o outline de botões/links, por que geralmente eles não combinam
-        com o estilo do site em geral
+        É comum a prática de <TextHighlight>remover o outline</TextHighlight>
         <br />
         Mas isso implica negativamente na acessibilidade do site, uma vez que fica difícil de saber
         onde o foco do teclado está

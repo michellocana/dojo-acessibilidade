@@ -1,6 +1,7 @@
 import React from 'react'
-import { Slide, Heading } from 'spectacle'
+import { Slide, Heading, Notes, Image } from 'spectacle'
 
+import TextHighlight from '../components/TextHighlight'
 import IntroBackground from '../components/IntroBackground'
 
 function Intro() {
@@ -18,10 +19,23 @@ function Intro() {
     </Slide>,
 
     <Slide>
+      <Image
+        src='./images/logo-cwi.svg'
+        style={{
+          maxWidth: 400,
+          marginBottom: 40
+        }}
+      />
+
       <Heading size={1} fit caps>
         Uma breve apresentação
       </Heading>
-    </Slide>,
+
+      <Notes>
+        Acessibilidade parecia ser um <TextHighlight>assunto importante</TextHighlight> mas{' '}
+        <TextHighlight>ninguém falava sobre</TextHighlight>
+      </Notes>
+    </Slide>
   ]
 }
 
