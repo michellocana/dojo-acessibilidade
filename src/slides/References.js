@@ -5,7 +5,7 @@ import Link from '../components/Link'
 
 function References() {
   return [
-    <Slide>
+    <Slide contentStyles={{ maxWidth: 1070 }}>
       <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
         Referências
       </Heading>
@@ -17,6 +17,12 @@ function References() {
             href='https://www.uxpin.com/studio/blog/8-website-accessibility-best-practices-to-improve-ux/'
           >
             8 Website Accessibility Best Practices to Improve UX
+          </Link>
+        </ListItem>
+
+        <ListItem>
+          <Link target='_blank' textColor='tertiary' href='https://a11yproject.com/checklist/'>
+            Accessibility Checklist
           </Link>
         </ListItem>
 
@@ -59,7 +65,15 @@ function References() {
             Alternatives to Placeholder Text
           </Link>
         </ListItem>
+      </List>
+    </Slide>,
 
+    <Slide contentStyles={{ maxWidth: 1070 }}>
+      <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
+        Referências
+      </Heading>
+
+      <List>
         <ListItem>
           <Link
             target='_blank'
@@ -69,15 +83,7 @@ function References() {
             Apresentação do GAIA
           </Link>
         </ListItem>
-      </List>
-    </Slide>,
 
-    <Slide>
-      <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
-        Referências
-      </Heading>
-
-      <List>
         <ListItem>
           <Link
             target='_blank'
@@ -108,6 +114,24 @@ function References() {
           <Link
             target='_blank'
             textColor='tertiary'
+            href='https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility'
+          >
+            Handling common accessibility problems
+          </Link>
+        </ListItem>
+      </List>
+    </Slide>,
+
+    <Slide contentStyles={{ maxWidth: 1070 }}>
+      <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
+        Referências
+      </Heading>
+
+      <List>
+        <ListItem>
+          <Link
+            target='_blank'
+            textColor='tertiary'
             href='https://www.deque.com/blog/current-design-trends-affect-web-accessibility/'
           >
             How Current Design Trends Affect Web Accessibility
@@ -123,15 +147,7 @@ function References() {
             How Many People With Disabilities Use My Website?
           </Link>
         </ListItem>
-      </List>
-    </Slide>,
 
-    <Slide>
-      <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
-        Referências
-      </Heading>
-
-      <List>
         <ListItem>
           <Link
             target='_blank'
@@ -141,12 +157,31 @@ function References() {
             I spent three months as a keyboard-only user. Here’s what I learned.
           </Link>
         </ListItem>
+
         <ListItem>
           <Link target='_blank' textColor='tertiary' href='http://designinclusivo.com/'>
             Princípios do design inclusivo
           </Link>
         </ListItem>
 
+        <ListItem>
+          <Link
+            target='_blank'
+            textColor='tertiary'
+            href='https://ux.stackexchange.com/questions/80487/revisiting-user-scalable-no'
+          >
+            Revisiting user-scalable=no
+          </Link>
+        </ListItem>
+      </List>
+    </Slide>,
+
+    <Slide contentStyles={{ maxWidth: 1070 }}>
+      <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
+        Referências
+      </Heading>
+
+      <List>
         <ListItem>
           <Link target='_blank' textColor='tertiary' href='https://webaim.org/articles/seizure/'>
             Seizure Disorders
@@ -173,6 +208,16 @@ function References() {
           <Link
             target='_blank'
             textColor='tertiary'
+            href='https://medium.com/@fkadev/stop-building-websites-with-infinite-scroll-2fcd6d4bed86'
+          >
+            Stop building websites with infinite scroll
+          </Link>
+        </ListItem>
+
+        <ListItem>
+          <Link
+            target='_blank'
+            textColor='tertiary'
             href='https://medium.muz.li/the-science-of-color-contrast-an-expert-designers-guide-33e84c41d156'
           >
             The Science of Color Contrast — An Expert Designer’s Guide
@@ -181,7 +226,7 @@ function References() {
       </List>
     </Slide>,
 
-    <Slide>
+    <Slide contentStyles={{ maxWidth: 1070 }}>
       <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
         Referências
       </Heading>
@@ -236,7 +281,15 @@ function References() {
             UX: Creating natural experiences with feedback loops
           </Link>
         </ListItem>
+      </List>
+    </Slide>,
 
+    <Slide contentStyles={{ maxWidth: 1070 }}>
+      <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
+        Referências
+      </Heading>
+
+      <List>
         <ListItem>
           <Link
             target='_blank'
@@ -246,15 +299,7 @@ function References() {
             Uncanny A11y
           </Link>
         </ListItem>
-      </List>
-    </Slide>,
 
-    <Slide>
-      <Heading size={1} caps textSize={56} style={{ paddingBottom: 20 }}>
-        Referências
-      </Heading>
-
-      <List>
         <ListItem>
           <Link target='_blank' textColor='tertiary' href='https://webaccessibility.guide/'>
             Web Accessibility Guide
