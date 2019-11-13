@@ -85,7 +85,7 @@ function ConsiderUserPreference() {
     // <DisablingAllTransitions />,
 
     <Slide>
-      <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
+      <Heading size={1} fit caps>
         Casos de uso (prefers-reduced-motion)
       </Heading>
 
