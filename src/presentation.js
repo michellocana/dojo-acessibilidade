@@ -41,7 +41,7 @@ import Conclusion from './slides/Conclusion'
 import References from './slides/References'
 // import KeyboardNavigationWorkingByDefault from './slides/KeyboardNavigationWorkingByDefault'
 import KeyboardNavigation from './slides/KeyboardNavigation'
-import AcessibilityHighlights from './slides/AcessibilityHighlights'
+// import AcessibilityHighlights from './slides/AcessibilityHighlights'
 import ConsiderUserPreference from './components/ConsiderUserPreference'
 import ToolsForEveryone from './slides/ToolsForEveryone'
 
@@ -58,61 +58,59 @@ const theme = createTheme(
   }
 )
 
-const Presentation = () => {
-  return (
-    <Deck
-      transition={['fade']}
-      transitionDuration={500}
-      theme={theme}
-      controls={false}
-      showFullscreenControl={false}
-      progress='bar'
-    >
-      {/* CHECKPOINT - INTRO */}
-      {Intro()}
-      {/* {AboutTheDojoApproach()} */}
-      {MinorityUserMyth()}
-      {Publics()}
-      {Principles()}
-      {/* CHECKPOINT - DEV */}
-      {/* {SemanticHtml()} */}
-      {/* {WaiAria()} */}
-      {CssHints()}
-      {ConsiderUserPreference()}
-      {AltTextGoodPractices()}
-      {DontDisableZoom()}
-      {SizeYourTouchAreas()}
-      {SkipToContentLink()}
-      {SmoothScroll()}
-      {ImmediateFeedback()}
-      {PredeterminatedActionTime()}
-      {KnowYourAudience()}
-      {TestInRealTools()}
-      {TestEverything()}
-      {/* {ToolsForDevs()} */}
-      {/* CHECKPOINT - DESIGN */}
-      {KeyboardNavigation()}
-      {AccessibilityInDesign()}
-      {FontSize()}
-      {ContrastColor()}
-      {ColorBlindness()}
-      {LowScopeOfVision()}
-      {Spellcheck()}
-      {AvoidDistractions()}
-      {ProvideSimpleVocabulary()}
-      {AvoidOrtographicalErrors()}
-      {GaiaProject()}
-      {SelfExplainableLinkTexts()}
-      {/* {UsePlaceholdersCorrectly()} */}
-      {/* {UseParallaxCorrectly()} */}
-      {ComponentWithAccessibilityIssues()}
-      {AcessibilityHighlights()}
-      {/* {ToolsForDesigners()} */}
-      {ToolsForEveryone()}
-      {Conclusion()}
-      {References()}
-    </Deck>
-  )
-}
+const Presentation = () => (
+  <Deck
+    transition={['fade']}
+    transitionDuration={500}
+    theme={theme}
+    controls={false}
+    showFullscreenControl={false}
+    progress='bar'
+  >
+    {/* CHECKPOINT - INTRO */}
+    {Intro()}
+    {/* {AboutTheDojoApproach()} */}
+    {MinorityUserMyth()}
+    {Publics()}
+    {Principles()}
+    {/* CHECKPOINT - DEV */}
+    {/* {SemanticHtml()} */}
+    {/* {WaiAria()} */}
+    {CssHints()}
+    {ConsiderUserPreference()}
+    {AltTextGoodPractices()}
+    {DontDisableZoom()}
+    {SizeYourTouchAreas()}
+    {SkipToContentLink()}
+    {SmoothScroll()}
+    {ImmediateFeedback()}
+    {PredeterminatedActionTime()}
+    {KnowYourAudience()}
+    {TestInRealTools()}
+    {TestEverything()}
+    {/* {ToolsForDevs()} */}
+    {/* CHECKPOINT - DESIGN */}
+    {KeyboardNavigation()}
+    {AccessibilityInDesign()}
+    {FontSize()}
+    {ContrastColor()}
+    {ColorBlindness()}
+    {LowScopeOfVision()}
+    {Spellcheck()}
+    {AvoidDistractions()}
+    {ProvideSimpleVocabulary()}
+    {AvoidOrtographicalErrors()}
+    {GaiaProject()}
+    {SelfExplainableLinkTexts()}
+    {/* {UsePlaceholdersCorrectly()} */}
+    {/* {UseParallaxCorrectly()} */}
+    {ComponentWithAccessibilityIssues()}
+    {/* {AcessibilityHighlights()} */}
+    {/* {ToolsForDesigners()} */}
+    {ToolsForEveryone()}
+    {Conclusion()}
+    {References()}
+  </Deck>
+)
 
 export default Presentation

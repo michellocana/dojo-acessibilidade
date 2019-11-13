@@ -1,10 +1,52 @@
 import React from 'react'
-import { Slide, Heading, Notes, Layout, Link, BlockQuote, Quote, Cite, Text, Fill } from 'spectacle'
+import {
+  Slide,
+  Heading,
+  Notes,
+  Layout,
+  Link,
+  BlockQuote,
+  Quote,
+  Cite,
+  Text,
+  Fill,
+  ListItem,
+  List,
+  Appear
+} from 'spectacle'
 
 import TextHighlight from '../components/TextHighlight'
 
 function Conclusion() {
   return [
+    <Slide>
+      <Heading size={1} caps textSize={56}>
+        Checklist
+      </Heading>
+
+      <List>
+        <ListItem>Garanta uma boa navegação por teclado</ListItem>
+        <Appear>
+          <ListItem>Permita que o usuário dê zoom</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Forneça alternativas à conteúdos não textuais</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Garanta um bom contraste de cores</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Provenha tamanhos de fontes adequados</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Use uma linguagem simples</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Não use a cor como único indicativo de informação</ListItem>
+        </Appear>
+      </List>
+    </Slide>,
+
     <Slide>
       <Heading size={1} caps textSize={56}>
         Concluindo
