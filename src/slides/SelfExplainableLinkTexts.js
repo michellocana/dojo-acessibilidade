@@ -3,6 +3,7 @@ import React from 'react'
 import { Slide, Heading, Notes, Layout, Text, Fill } from 'spectacle'
 
 import Link from '../components/Link'
+import TextHighlight from '../components/TextHighlight'
 
 function SelfExplainableLinkTexts() {
   return (
@@ -35,12 +36,13 @@ function SelfExplainableLinkTexts() {
       </Layout>
 
       <Notes>
-        Alguns leitores de tela como NVDA tem uma funcionalidade de lista todos os links disponíveis
-        na página, para facilitar a navegação...
+        Alguns leitores de tela como NVDA tem uma funcionalidade de{' '}
+        <TextHighlight>listar todos os links</TextHighlight> disponíveis na página, para facilitar a
+        navegação...
         <br />
         <br />
-        ...essa funcionalidade não servirá de nada se os links da página tiverem textos genéricos
-        como "clique aqui"
+        ...essa funcionalidade não servirá de nada se os links da página tiverem{' '}
+        <TextHighlight>textos genéricos</TextHighlight> como "clique aqui"
       </Notes>
     </Slide>
   )

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Slide, Heading, Notes, Layout, Fit, Text, Fill } from 'spectacle'
 
+import TextHighlight from '../components/TextHighlight'
+
 function FontSize() {
   return (
     <Slide>
@@ -24,8 +26,9 @@ function FontSize() {
         </Fill>
 
         <Notes>
-          No safari, quando um elemento clicável é clicado e ele não tem um font-size de no mínimo
-          16px, é dado zoom automaticamente
+          <TextHighlight>No safari</TextHighlight>, quando um elemento clicável é clicado e ele não
+          tem um font-size de no mínimo <TextHighlight>16px</TextHighlight>, é dado zoom
+          automaticamente
         </Notes>
       </Layout>
     </Slide>

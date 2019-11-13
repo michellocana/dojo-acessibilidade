@@ -2,6 +2,7 @@ import React from 'react'
 import { Heading, List, ListItem, Slide, Layout, Fit, Notes, Text, S } from 'spectacle'
 
 import Link from '../components/Link'
+import TextHighlight from '../components/TextHighlight'
 
 function ComponentWithAccessibilityIssues() {
   return [
@@ -38,7 +39,8 @@ function ComponentWithAccessibilityIssues() {
 
       <Notes>
         Modais que abrem sozinha, como ao entrar numa página ou antes de sair, geram uma quebra de
-        expectativa e podem ser uma situação de stress para quem tem autismo
+        expectativa e podem ser uma situação de stress para{' '}
+        <TextHighlight>quem tem autismo</TextHighlight>
       </Notes>
     </Slide>,
 
@@ -98,11 +100,14 @@ function ComponentWithAccessibilityIssues() {
       </List>
 
       <Notes>
-        Autoplay sem pause quando tá com mouse em cima. Isso pode ser prejudicial para usuários com
-        dislexia/deficit de atenção.
+        Autoplay sem pause quando tá com mouse em cima. Isso pode ser prejudicial para usuários com{' '}
+        <TextHighlight>dislexia/deficit de atenção</TextHighlight>.
         <br />
         <br />
-        Difícil descoberta de conteúdo - Impacta acessibilidade e engajamento dos usuários
+        Difícil descoberta de conteúdo - Impacta <TextHighlight>
+          {' '}
+          acessibilidade{' '}
+        </TextHighlight> e <TextHighlight>engajamento dos usuários</TextHighlight>
       </Notes>
     </Slide>,
 

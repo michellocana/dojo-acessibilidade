@@ -1,5 +1,6 @@
 import React from 'react'
 import { Slide, Notes, Heading, Text, Layout, Appear, Image, List, ListItem } from 'spectacle'
+import TextHighlight from '../components/TextHighlight'
 
 function Principles() {
   return [
@@ -42,10 +43,12 @@ function Principles() {
       </Layout>
 
       <Notes>
-        Ter em mente que só por que o conteúdo é visível com um sentido (como a visão), não quer
-        dizer que todos consigam consumir
+        Ter em mente que só por que o conteúdo é visível{' '}
+        <TextHighlight>com um sentido</TextHighlight> (como a visão), não quer dizer que{' '}
+        <TextHighlight>todos consigam consumir</TextHighlight>
         <br />
-        <br />O conteúdo do site deve ser perceptível de todas as formas possíveis
+        <br />O conteúdo do site deve ser perceptível de{' '}
+        <TextHighlight>todas as formas possíveis</TextHighlight>
       </Notes>
     </Slide>,
 
@@ -60,10 +63,12 @@ function Principles() {
       </Text>
 
       <Notes>
-        Como usando SOMENTE o teclado ou mouse
+        Como usando somente o <TextHighlight>teclado</TextHighlight> ou{' '}
+        <TextHighlight>mouse</TextHighlight>
         <br />
         <br />
-        Fazer com que a experiência no site seja a mesma, independente do dispositivo usado
+        Fazer com que a experiência no site seja a mesma,{' '}
+        <TextHighlight>independente do dispositivo usado</TextHighlight>
       </Notes>
     </Slide>,
 
