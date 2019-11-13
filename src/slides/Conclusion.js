@@ -11,12 +11,12 @@ function Conclusion() {
       </Heading>
 
       <Notes>
-        Preciso seguir todas as dicas?
+        Preciso seguir <TextHighlight>todas as dicas</TextHighlight>?
         <br />
         <br />
-        Acessibilidade = prima-irmã da UX
+        Acessibilidade = <TextHighlight>prima-irmã da UX</TextHighlight>
         <br />
-        <br />A Web foi feita pra ser acessível desde o começo
+        <br />A Web foi feita pra ser acessível <TextHighlight>desde o começo</TextHighlight>
       </Notes>
     </Slide>,
 

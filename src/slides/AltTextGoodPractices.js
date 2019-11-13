@@ -4,6 +4,7 @@ import { Slide, Heading, CodePane, Notes, Text, S, Appear } from 'spectacle'
 // import AltExample from '../components/AltExample'
 import ExcessiveAltExample from '../components/ExcessiveAltExample'
 import IrrelevantAltExample from '../components/IrrelevantAltExample'
+import TextHighlight from '../components/TextHighlight'
 // import ContextualImageAlt from '../components/ContextualImageAlt'
 
 function AltTextGoodPractices() {
@@ -76,8 +77,17 @@ function AltTextGoodPractices() {
         Em busca do alt perfeito
       </Heading>
 
-      <Text textColor='secondary' textSize={36} style={{ marginTop: 20 }}>
-        Não precisa adicionar "Foto de..." ou "Imagem de..." no começo do texto de alt
+      <Text textColor='secondary' fit style={{ marginTop: 20 }}>
+        Não precisa adicionar{' '}
+        <S type='bold' textColor='tertiary'>
+          "Foto de..."
+        </S>{' '}
+        ou{' '}
+        <S type='bold' textColor='tertiary'>
+          "Imagem de..."
+        </S>{' '}
+        <br />
+        no começo do texto de alt
       </Text>
     </Slide>,
 
@@ -86,8 +96,9 @@ function AltTextGoodPractices() {
         Em busca do alt perfeito
       </Heading>
 
-      <Text textColor='secondary' textSize={36} style={{ marginTop: 20 }}>
-        Entenda o contexto da imagem na página, e só depois disso descreva ela
+      <Text textColor='secondary' fit style={{ marginTop: 20 }}>
+        Entenda o contexto da imagem na página,
+        <br />e só depois disso descreva ela
       </Text>
     </Slide>,
 
@@ -112,7 +123,10 @@ function AltTextGoodPractices() {
         </S>
       </Text>
 
-      <Notes>Claro</Notes>
+      <Notes>
+        Além de deixar o conteúdo <TextHighlight>mais interessante</TextHighlight> pro{' '}
+        <TextHighlight>público em geral</TextHighlight>
+      </Notes>
     </Slide>
   ]
 }

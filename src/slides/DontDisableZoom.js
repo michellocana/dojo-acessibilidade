@@ -73,7 +73,7 @@ function DontDisableZoom() {
         Usar fontes extra-grandes para tudo
       </Heading>
 
-      {renderPlusText('Beneficia usuários mais velhos / com dificuldades visuais')}
+      {renderPlusText('Beneficia usuários com deficiências visuais')}
       {renderLessText('Prejudica a estética do site')}
       {renderLessText('Limita a quantidade de conteúdo na tela')}
 
