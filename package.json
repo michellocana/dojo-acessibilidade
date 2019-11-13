@@ -6,9 +6,11 @@
     "classnames": "^2.2.6",
     "focus-trap-react": "^6.0.0",
     "framer-motion": "^1.6.7",
+    "get-contrast-ratio": "^0.2.1",
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "spectacle": "^5.7.1",
     "spectacle-scripts": "2.4.0"
   },
   "scripts": {
