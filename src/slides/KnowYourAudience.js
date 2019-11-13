@@ -1,15 +1,20 @@
 import React from 'react'
-import { Slide, Heading, Notes, List, ListItem } from 'spectacle'
+import { Slide, Heading, Notes, List, ListItem, Text } from 'spectacle'
 
 function KnowYourAudience() {
   return [
     <Slide>
       <Heading size={1} fit caps>
-        Boas Práticas - Não leve em conta que você sabe
-        <br /> por onde e como o usuário acessa seu site
+        Não leve em conta que você
+        <br />
+        sabe por onde e como o
+        <br />
+        usuário acessa seu site
       </Heading>
 
-      <Notes>Sempre vai ter um usuário que vai te provar o contrário</Notes>
+      <Text textColor='secondary' style={{ paddingTop: 15 }}>
+        O usuário sempre vai te provar o contrário
+      </Text>
     </Slide>,
 
     <Slide>

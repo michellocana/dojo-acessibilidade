@@ -1,16 +1,14 @@
 import React from 'react'
-import { Heading, List, ListItem, Slide, Layout, Fit, Notes, Text } from 'spectacle'
+import { Heading, List, ListItem, Slide, Layout, Fit, Notes, Text, S } from 'spectacle'
 
 import Link from '../components/Link'
 
 function ComponentWithAccessibilityIssues() {
   return [
     <Slide>
-      <Heading size={1} fit caps style={{ paddingBottom: 0 }}>
-        Boas Práticas - Evite usar componentes
-      </Heading>
-
       <Heading size={1} fit caps>
+        Evite usar componentes
+        <br />
         conhecidos por má acessibilidade
       </Heading>
 
@@ -25,9 +23,9 @@ function ComponentWithAccessibilityIssues() {
       <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
         <Fit style={{ paddingBottom: 20 }}>
           <Heading size={1} fit caps>
-            Quebra de expectativa - Esse é só um
+            Modais geram quebra de
             <br />
-            dos problemas de usar modal
+            expectativa, de forma negativa
           </Heading>
         </Fit>
 
@@ -48,9 +46,9 @@ function ComponentWithAccessibilityIssues() {
       <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
         <Fit style={{ paddingBottom: 20 }}>
           <Heading size={1} fit caps>
-            Problemas de modais - A maioria não
+            A maioria das modais não possuem
             <br />
-            possui controle de foco (focus trap)
+            controle de foco (focus trap)
           </Heading>
         </Fit>
 
@@ -64,14 +62,16 @@ function ComponentWithAccessibilityIssues() {
 
     <Slide>
       <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
-        Problemas de modais - Não seguem
+        Modais não seguem
         <br />o fluxo de conteúdo do site
       </Heading>
 
       <Text textColor='secondary'>
-        Dependendo do layout, modais pode serem vistas como uma página por si só, e usuários com
-        deficiências cognitivas podem tentar aperta o botão de voltar página e não ter o resultado
-        esperado
+        Dependendo do layout, modais pode serem vistas como uma página por si só, e usuários com{' '}
+        <S type='bold' textColor='tertiary'>
+          deficiências cognitivas
+        </S>{' '}
+        podem tentar apertar o botão de voltar página e não ter o resultado esperado
       </Text>
     </Slide>,
 

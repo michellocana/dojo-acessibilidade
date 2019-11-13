@@ -9,18 +9,22 @@ function TestInRealTools() {
       <Layout style={{ flex: 1, flexDirection: 'column', height: '100%' }}>
         <Fit>
           <Heading size={1} fit caps>
-            Boas Práticas - Teste em ferramentas reais, você mesmo
+            Teste em ferramentas reais, você mesmo
           </Heading>
 
-          <Text textColor='secondary' textSize={24} style={{ paddingTop: 10, paddingBottom: 20 }}>
-            Lighthouse está aí pra ajudar, mas não confie cegamente no score dele quando se trata de
-            acessibilidade.{' '}
+          <Text
+            fit
+            textColor='secondary'
+            textSize={24}
+            style={{ paddingTop: 10, paddingBottom: 20 }}
+          >
+            Ferramentas automatizadas (como o Lighthouse) podem{' '}
             <Link
               target='_blank'
               textColor='tertiary'
               href='https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/'
             >
-              Muita coisa pode passar despercebida
+              deixar muita coisa passar
             </Link>
             .
           </Text>
@@ -55,7 +59,7 @@ function TestInRealTools() {
 
     <Slide>
       <Heading size={1} fit caps>
-        Boas Práticas - Teste em ferramentas reais
+        Teste em ferramentas reais
       </Heading>
 
       <Text textColor='secondary' textAlign='left' style={{ paddingTop: 30 }}>

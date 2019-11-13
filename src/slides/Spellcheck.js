@@ -9,7 +9,7 @@ function Spellcheck() {
       <Layout style={{ height: '100%', flexDirection: 'column', justifyContent: 'center' }}>
         <Fit style={{ paddingBottom: 20 }}>
           <Heading size={1} fit caps textSize={36}>
-            Pensando em deficiências cognitivas - Spellcheck
+            Auxiliando usuários com deficiências cognitivas
           </Heading>
         </Fit>
 

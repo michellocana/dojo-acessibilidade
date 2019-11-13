@@ -8,7 +8,7 @@ function ColorBlindness() {
   return [
     <Slide>
       <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
-        Pensando em deficiências - Daltonismo
+        Auxiliando usuários com Daltonismo
       </Heading>
 
       <ColorBlindnessExample />

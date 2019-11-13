@@ -8,7 +8,7 @@ function SelfExplainableLinkTexts() {
   return (
     <Slide>
       <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
-        Boas Práticas - Forneça texto para links <br />
+        Forneça texto para links <br />
         que sejam auto-explicativos
       </Heading>
 

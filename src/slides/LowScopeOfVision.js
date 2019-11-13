@@ -3,9 +3,9 @@ import { Slide, Heading, Notes } from 'spectacle'
 
 function LowScopeOfVision() {
   return (
-    <Slide>
+    <Slide contentStyles={{ maxWidth: 1150 }}>
       <Heading size={1} fit caps style={{ paddingBottom: 15 }}>
-        Pensando em deficiências - Campo de visão baixo
+        Auxiliando usuários com campo de visão baixo
       </Heading>
 
       <img

@@ -6,8 +6,10 @@ function AvoidDistractions() {
     <Slide style={{ padding: '40px 0' }}>
       <Layout style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
         <Fit>
-          <Heading size={1} fit caps style={{ paddingBottom: 20 }}>
-            Mantenha o usuário engajado - Evite distrações
+          <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
+            Mantenha o usuário engajado
+            <br />
+            Evite distrações
           </Heading>
         </Fit>
 

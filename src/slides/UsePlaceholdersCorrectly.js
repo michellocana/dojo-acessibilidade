@@ -5,7 +5,7 @@ function UsePlaceholdersCorrectly() {
   return (
     <Slide>
       <Heading size={1} fit caps style={{ paddingBottom: 10 }}>
-        Boas Práticas - Use corretamente placeholders
+        Use corretamente placeholders
       </Heading>
 
       <div style={{ position: 'relative' }}>
