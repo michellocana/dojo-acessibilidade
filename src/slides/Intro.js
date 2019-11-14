@@ -1,5 +1,5 @@
 import React from 'react'
-import { Slide, Heading, Notes, Image } from 'spectacle'
+import { Slide, Heading, Notes, Image, Text } from 'spectacle'
 
 import TextHighlight from '../components/TextHighlight'
 import IntroBackground from '../components/IntroBackground'
@@ -16,6 +16,18 @@ function Intro() {
       <Heading size={2} fit caps>
         Como posso fazer minha parte?
       </Heading>
+
+      <div
+        style={{
+          width: '100%',
+          maxWidth: 400,
+          margin: '15px auto 0'
+        }}
+      >
+        <Text textColor='tertiary' fit>
+          http://bit.ly/HubShareA11y
+        </Text>
+      </div>
     </Slide>,
 
     <Slide>
