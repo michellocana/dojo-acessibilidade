@@ -38,12 +38,16 @@ function Conclusion() {
         <Appear>
           <ListItem>Provenha tamanhos de fontes adequados</ListItem>
         </Appear>
-        <Appear>
-          <ListItem>Use uma linguagem simples</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Não use a cor como único indicativo de informação</ListItem>
-        </Appear>
+        {!window.isPocket && (
+          <>
+            <Appear>
+              <ListItem>Use uma linguagem simples</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Não use a cor como único indicativo de informação</ListItem>
+            </Appear>
+          </>
+        )}
       </List>
     </Slide>,
 
@@ -85,18 +89,20 @@ function Conclusion() {
 
           <Text textColor='secondary'>Caso queira deixar seu feedback:</Text>
 
-          {/* <Text
-              textColor='secondary'
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: 5
-              }}
-            >
-              <img width={40} style={{ marginRight: 10 }} src='./images/slack.svg' alt='Slack' />
-              michell.santo
-            </Text> */}
+          <Link
+            href='slack://user?team=T04M3PXQQ&id=UAJ3721TR'
+            textColor='tertiary'
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 5,
+              marginTop: 30
+            }}
+          >
+            <img width={40} style={{ marginRight: 10 }} src='./images/slack.svg' alt='Slack' />
+            michell.santo
+          </Link>
 
           <Link
             href='mailto:michell.santo@cwi.com.br'
@@ -106,7 +112,7 @@ function Conclusion() {
               alignItems: 'center',
               justifyContent: 'center',
               padding: 5,
-              marginTop: 30
+              marginTop: 15
             }}
           >
             <img width={40} style={{ marginRight: 10 }} src='./images/mail.svg' alt='E-mail' />

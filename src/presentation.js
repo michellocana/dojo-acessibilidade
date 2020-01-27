@@ -1,7 +1,7 @@
 import React from 'react'
-
 import { Deck } from 'spectacle'
 import createTheme from 'spectacle/lib/themes/default'
+import queryString from 'query-string'
 
 import 'normalize.css'
 
@@ -58,59 +58,68 @@ const theme = createTheme(
   }
 )
 
-const Presentation = () => (
-  <Deck
-    transition={['fade']}
-    transitionDuration={500}
-    theme={theme}
-    controls={false}
-    showFullscreenControl={false}
-    progress='bar'
-  >
-    {/* CHECKPOINT - INTRO */}
-    {Intro()}
-    {/* {AboutTheDojoApproach()} */}
-    {MinorityUserMyth()}
-    {Publics()}
-    {Principles()}
-    {/* CHECKPOINT - DEV */}
-    {/* {SemanticHtml()} */}
-    {/* {WaiAria()} */}
-    {CssHints()}
-    {ConsiderUserPreference()}
-    {AltTextGoodPractices()}
-    {DontDisableZoom()}
-    {SizeYourTouchAreas()}
-    {SkipToContentLink()}
-    {SmoothScroll()}
-    {ImmediateFeedback()}
-    {PredeterminatedActionTime()}
-    {/* {ToolsForDevs()} */}
-    {/* CHECKPOINT - DESIGN */}
-    {KeyboardNavigation()}
-    {/* {AccessibilityInDesign()} */}
-    {FontSize()}
-    {ContrastColor()}
-    {ColorBlindness()}
-    {LowScopeOfVision()}
-    {Spellcheck()}
-    {AvoidDistractions()}
-    {ProvideSimpleVocabulary()}
-    {AvoidOrtographicalErrors()}
-    {GaiaProject()}
-    {SelfExplainableLinkTexts()}
-    {/* {UsePlaceholdersCorrectly()} */}
-    {/* {UseParallaxCorrectly()} */}
-    {ComponentWithAccessibilityIssues()}
-    {KnowYourAudience()}
-    {TestInRealTools()}
-    {TestEverything()}
-    {/* {AcessibilityHighlights()} */}
-    {/* {ToolsForDesigners()} */}
-    {ToolsForEveryone()}
-    {Conclusion()}
-    {References()}
-  </Deck>
-)
+const qs = queryString.parse(window.location.search)
+
+window.isPocket = !!qs.pocket
+window.isPresenter = window.location.hash.includes('?presenter')
+
+const Presentation = () => {
+  const { isPocket } = window
+
+  return (
+    <Deck
+      transition={['fade']}
+      transitionDuration={500}
+      theme={theme}
+      controls={false}
+      showFullscreenControl={false}
+      progress='bar'
+    >
+      {/* CHECKPOINT - INTRO */}
+      {Intro()}
+      {/* {AboutTheDojoApproach()} */}
+      {MinorityUserMyth()}
+      {!isPocket && Publics()}
+      {!isPocket && Principles()}
+      {/* CHECKPOINT - DEV */}
+      {/* {SemanticHtml()} */}
+      {/* {WaiAria()} */}
+      {CssHints()}
+      {!isPocket && ConsiderUserPreference()}
+      {AltTextGoodPractices()}
+      {DontDisableZoom()}
+      {SizeYourTouchAreas()}
+      {!isPocket && SkipToContentLink()}
+      {SmoothScroll()}
+      {!isPocket && ImmediateFeedback()}
+      {PredeterminatedActionTime()}
+      {/* {ToolsForDevs()} */}
+      {/* CHECKPOINT - DESIGN */}
+      {!isPocket && KeyboardNavigation()}
+      {/* {AccessibilityInDesign()} */}
+      {FontSize()}
+      {ContrastColor()}
+      {!isPocket && ColorBlindness()}
+      {!isPocket && LowScopeOfVision()}
+      {Spellcheck()}
+      {!isPocket && AvoidDistractions()}
+      {!isPocket && ProvideSimpleVocabulary()}
+      {!isPocket && AvoidOrtographicalErrors()}
+      {!isPocket && GaiaProject()}
+      {!isPocket && SelfExplainableLinkTexts()}
+      {/* {UsePlaceholdersCorrectly()} */}
+      {/* {UseParallaxCorrectly()} */}
+      {ComponentWithAccessibilityIssues()}
+      {!isPocket && KnowYourAudience()}
+      {!isPocket && TestInRealTools()}
+      {TestEverything()}
+      {/* {AcessibilityHighlights()} */}
+      {/* {ToolsForDesigners()} */}
+      {ToolsForEveryone()}
+      {Conclusion()}
+      {References()}
+    </Deck>
+  )
+}
 
 export default Presentation

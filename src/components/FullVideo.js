@@ -16,7 +16,7 @@ function FullVideo({
         className={styles.video}
         autoPlay={autoPlay}
         loop={loop}
-        muted={muted}
+        muted={muted || window.isPresenter}
         style={{ objectFit, ...style }}
       >
         <source src={src} type='video/mp4' />
