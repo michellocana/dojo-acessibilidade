@@ -91,16 +91,18 @@ function AltTextGoodPractices() {
       </Text>
     </Slide>,
 
-    <Slide>
-      <Heading size={1} fit caps>
-        Em busca do alt perfeito
-      </Heading>
+    !window.isPocket && (
+      <Slide>
+        <Heading size={1} fit caps>
+          Em busca do alt perfeito
+        </Heading>
 
-      <Text textColor='secondary' fit style={{ marginTop: 20 }}>
-        Entenda o contexto da imagem na página,
-        <br />e só depois disso descreva ela
-      </Text>
-    </Slide>,
+        <Text textColor='secondary' fit style={{ marginTop: 20 }}>
+          Entenda o contexto da imagem na página,
+          <br />e só depois disso descreva ela
+        </Text>
+      </Slide>
+    ),
 
     // <ImageContext />
 

@@ -25,7 +25,7 @@ function Intro() {
         }}
       >
         <Text textColor='tertiary' fit>
-          http://bit.ly/HubShareA11y
+          http://bit.ly/DojoA11y
         </Text>
       </div>
     </Slide>,

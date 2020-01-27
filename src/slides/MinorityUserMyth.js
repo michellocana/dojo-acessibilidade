@@ -1,6 +1,8 @@
 import React from 'react'
 import { Slide, Heading, Appear, Quote, Cite, BlockQuote, Notes, Text } from 'spectacle'
 
+import TextHighlight from '../components/TextHighlight'
+
 function MinorityUserMyth() {
   return [
     <Slide>
@@ -40,6 +42,14 @@ function MinorityUserMyth() {
       </Text>
 
       <Notes>
+        {window.isPocket && (
+          <>
+            <TextHighlight>Visual</TextHighlight>, <TextHighlight>motora</TextHighlight>,{' '}
+            <TextHighlight>auditiva</TextHighlight> ou <TextHighlight>cognitiva</TextHighlight>
+            <br />
+            <br />
+          </>
+        )}
         Imagine a cada 7 pessoas, uma delas ser privada de ter uma experiência como todas as outras,
         por algo que ela não escolheu ter
         <br />

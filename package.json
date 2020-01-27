@@ -8,6 +8,7 @@
     "framer-motion": "^1.6.7",
     "get-contrast-ratio": "^0.2.1",
     "lodash": "^4.17.15",
+    "query-string": "^6.10.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "spectacle": "^5.7.1",
