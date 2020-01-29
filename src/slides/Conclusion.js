@@ -38,16 +38,12 @@ function Conclusion() {
         <Appear>
           <ListItem>Provenha tamanhos de fontes adequados</ListItem>
         </Appear>
-        {!window.isPocket && (
-          <>
-            <Appear>
-              <ListItem>Use uma linguagem simples</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Não use a cor como único indicativo de informação</ListItem>
-            </Appear>
-          </>
-        )}
+        <Appear>
+          <ListItem>Use uma vocabulário simples</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Não use a cor como único indicativo de informação</ListItem>
+        </Appear>
       </List>
     </Slide>,
 
