@@ -91,7 +91,7 @@ function AltTextGoodPractices() {
       </Text>
     </Slide>,
 
-    !window.isPocket && (
+    window.isFull && (
       <Slide>
         <Heading size={1} fit caps>
           Em busca do alt perfeito

@@ -60,11 +60,11 @@ const theme = createTheme(
 
 const qs = queryString.parse(window.location.search)
 
-window.isPocket = !!qs.pocket
+window.isFull = !!qs.full
 window.isPresenter = window.location.hash.includes('?presenter')
 
 const Presentation = () => {
-  const { isPocket } = window
+  const { isFull } = window
 
   return (
     <Deck
@@ -79,39 +79,39 @@ const Presentation = () => {
       {Intro()}
       {/* {AboutTheDojoApproach()} */}
       {MinorityUserMyth()}
-      {!isPocket && Publics()}
-      {!isPocket && Principles()}
+      {isFull && Publics()}
+      {isFull && Principles()}
       {/* CHECKPOINT - DEV */}
       {/* {SemanticHtml()} */}
       {/* {WaiAria()} */}
       {CssHints()}
-      {!isPocket && ConsiderUserPreference()}
+      {isFull && ConsiderUserPreference()}
       {AltTextGoodPractices()}
       {DontDisableZoom()}
       {SizeYourTouchAreas()}
-      {!isPocket && SkipToContentLink()}
+      {isFull && SkipToContentLink()}
       {SmoothScroll()}
-      {!isPocket && ImmediateFeedback()}
+      {isFull && ImmediateFeedback()}
       {PredeterminatedActionTime()}
       {/* {ToolsForDevs()} */}
       {/* CHECKPOINT - DESIGN */}
-      {!isPocket && KeyboardNavigation()}
+      {isFull && KeyboardNavigation()}
       {/* {AccessibilityInDesign()} */}
       {FontSize()}
       {ContrastColor()}
-      {!isPocket && ColorBlindness()}
-      {!isPocket && LowScopeOfVision()}
+      {isFull && ColorBlindness()}
+      {isFull && LowScopeOfVision()}
       {Spellcheck()}
-      {!isPocket && AvoidDistractions()}
-      {!isPocket && ProvideSimpleVocabulary()}
-      {!isPocket && AvoidOrtographicalErrors()}
-      {!isPocket && GaiaProject()}
-      {!isPocket && SelfExplainableLinkTexts()}
+      {isFull && AvoidDistractions()}
+      {ProvideSimpleVocabulary()}
+      {isFull && AvoidOrtographicalErrors()}
+      {isFull && GaiaProject()}
+      {isFull && SelfExplainableLinkTexts()}
       {/* {UsePlaceholdersCorrectly()} */}
       {/* {UseParallaxCorrectly()} */}
       {ComponentWithAccessibilityIssues()}
-      {!isPocket && KnowYourAudience()}
-      {!isPocket && TestInRealTools()}
+      {isFull && KnowYourAudience()}
+      {isFull && TestInRealTools()}
       {TestEverything()}
       {/* {AcessibilityHighlights()} */}
       {/* {ToolsForDesigners()} */}
