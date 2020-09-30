@@ -42,7 +42,7 @@ function MinorityUserMyth() {
       </Text>
 
       <Notes>
-        {window.isPocket && (
+        {!window.isFull && (
           <>
             <TextHighlight>Visual</TextHighlight>, <TextHighlight>motora</TextHighlight>,{' '}
             <TextHighlight>auditiva</TextHighlight> ou <TextHighlight>cognitiva</TextHighlight>

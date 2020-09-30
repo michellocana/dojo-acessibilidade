@@ -25,34 +25,32 @@ function ContrastColor() {
       </Text>
     </Slide>,
 
-    !window.isPocket && (
-      <Slide>
-        <Layout style={{ flexDirection: 'column' }}>
-          <Fit>
-            <Heading size={1} fit caps>
-              O que define o nível de
-              <br />
-              contraste entre 2 cores?
-            </Heading>
-          </Fit>
+    <Slide>
+      <Layout style={{ flexDirection: 'column' }}>
+        <Fit>
+          <Heading size={1} fit caps>
+            O que define o nível de
+            <br />
+            contraste entre 2 cores?
+          </Heading>
+        </Fit>
 
-          <Fill>
-            <RandomColorContrasts />
-          </Fill>
-        </Layout>
+        <Fill>
+          <RandomColorContrasts />
+        </Fill>
+      </Layout>
 
-        <Notes>
-          Um <TextHighlight>cálculo</TextHighlight> comparando o{' '}
-          <TextHighlight>nível de luminosidade</TextHighlight> entre 2 cores
-          <br />
-          <br />
-          Esse nível vai de <TextHighlight>1 até 21</TextHighlight>
-          <br />
-          <br />
-          Falar sobre como o <TextHighlight>olho humano</TextHighlight> pode enganar
-        </Notes>
-      </Slide>
-    ),
+      <Notes>
+        Um <TextHighlight>cálculo</TextHighlight> comparando o{' '}
+        <TextHighlight>nível de luminosidade</TextHighlight> entre 2 cores
+        <br />
+        <br />
+        Esse nível vai de <TextHighlight>1 até 21</TextHighlight>
+        <br />
+        <br />
+        Falar sobre como o <TextHighlight>olho humano</TextHighlight> pode enganar
+      </Notes>
+    </Slide>,
 
     // <Slide>
     //   <Heading size={1} fit caps>
@@ -69,46 +67,41 @@ function ContrastColor() {
     //     <img src='./images/relative-luminance-formula.png' alt='' style={{ maxHeight: '75vh' }} />
     //   </Appear>
     // </Slide>,
+    <Slide contentStyles={{ height: '100%', padding: '30px 0' }}>
+      <ImageWithCredits
+        isVideo
+        src='./videos/contrast-checker.webm'
+        videoType='video/webm'
+        author='WebAIM'
+        credits='Contrast Checker'
+        creditsLink='https://webaim.org/resources/contrastchecker/'
+      />
 
-    !window.isPocket && (
-      <Slide contentStyles={{ height: '100%', padding: '30px 0' }}>
-        <ImageWithCredits
-          isVideo
-          src='./videos/contrast-checker.webm'
-          videoType='video/webm'
-          author='WebAIM'
-          credits='Contrast Checker'
-          creditsLink='https://webaim.org/resources/contrastchecker/'
-        />
+      <Notes>
+        Categorias: <TextHighlight>AA</TextHighlight> e <TextHighlight>AAA</TextHighlight>
+        <br />
+        <br />O valor pode <TextHighlight>variar</TextHighlight> de acordo com o{' '}
+        <TextHighlight>tamanho do texto</TextHighlight>
+        <br />
+        <br />
+        Dica para testar o contraste: se estiver no celular, tente{' '}
+        <TextHighlight>baixar o brilho da tela</TextHighlight>
+      </Notes>
+    </Slide>,
 
-        <Notes>
-          Categorias: <TextHighlight>AA</TextHighlight> e <TextHighlight>AAA</TextHighlight>
-          <br />
-          <br />O valor pode <TextHighlight>variar</TextHighlight> de acordo com o{' '}
-          <TextHighlight>tamanho do texto</TextHighlight>
-          <br />
-          <br />
-          Dica para testar o contraste: se estiver no celular, tente{' '}
-          <TextHighlight>baixar o brilho da tela</TextHighlight>
-        </Notes>
-      </Slide>
-    ),
+    <Slide>
+      <ImageWithCredits
+        credits='Stark'
+        src='./images/stark.png'
+        creditsLink='https://getstark.co/'
+        extraText='plugin para Figma / Adobe XD / Sketch'
+      />
 
-    !window.isPocket && (
-      <Slide>
-        <ImageWithCredits
-          credits='Stark'
-          src='./images/stark.png'
-          creditsLink='https://getstark.co/'
-          extraText='plugin para Figma / Adobe XD / Sketch'
-        />
-
-        <Notes>
-          Para quem usa Figma, tem o plugin <TextHighlight>Stark</TextHighlight>, que faz esses
-          cálculos direto no app
-        </Notes>
-      </Slide>
-    )
+      <Notes>
+        Para quem usa Figma, tem o plugin <TextHighlight>Stark</TextHighlight>, que faz esses
+        cálculos direto no app
+      </Notes>
+    </Slide>
   ]
 }
 
