@@ -99,7 +99,7 @@ const Presentation = () => {
       {/* {AccessibilityInDesign()} */}
       {FontSize()}
       {ContrastColor()}
-      {isFull && ColorBlindness()}
+      {ColorBlindness()}
       {isFull && LowScopeOfVision()}
       {Spellcheck()}
       {isFull && AvoidDistractions()}
